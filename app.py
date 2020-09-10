@@ -14,7 +14,7 @@ migrate = Migrate(app, db)
 class Login(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), index=True, unique=True)
-    password = db.Column(db.String(128))
+    #password = db.Column(db.String(128))
 
     def __repr__(self):
         return '<Login {}>'.format(self.name)
