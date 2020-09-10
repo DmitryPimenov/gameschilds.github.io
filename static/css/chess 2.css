@@ -1,0 +1,82 @@
+body {
+	background: #fed;
+}
+
+.field {
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	font-size: 1.8em;
+	transition-property: background-color;
+	transition-duration:0.4s;
+	transition-timing-function: linear;
+}
+
+.white {
+	background: #bbb;
+	
+}
+
+.black {
+	background: #888;
+}
+
+.highlighted {
+	background: #dc8;
+}
+
+.pawn {
+	font-size: 1.4em;
+}
+
+td {
+	cursor: pointer;
+}
+
+button {
+	border-radius: 0.5em;
+}
+
+#edit {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border: 1px solid black;
+}
+
+#edit td {
+	border: 1px solid black;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+}
+
+#eQuit {
+	text-align: center;
+	color: red;
+	
+}
+
+.editselected {
+	background: #ada;
+}
+
+#log {
+	padding: 1em;
+	font-size: 1em;
+}
+
+.playActive {
+	font-size: 1.3em;
+	color : green;
+}
+
+.playSelected {
+	background: #c98;
+}
+
+
+.editActive {
+	font-size: 1.3em;
+	color : green;
+}

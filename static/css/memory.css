@@ -1,0 +1,167 @@
+
+*{ 
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box; 
+	font-family: arial,serif;
+} 
+
+body{
+	background-color: white;
+}
+
+#game_section{
+	Position:relative;
+	padding:20px 0 50px 0;
+	text-align:center;
+}
+
+#game_section h1{
+	color: #b6dbb1; 
+	font-size:2em;
+	text-align:center;
+	background-color:#282727;
+	margin:auto;
+	margin-bottom:40px;
+	Width:80%;
+	max-width:300px;
+	border-radius:10px;
+	Border:2px dashed #409AA7;
+	padding:10px 2px;
+}
+
+#game_section p{
+	color: #b6dbb1; 
+	font-size :1.3em ;
+}
+
+#game_section p span{
+	Color:#409AA7;
+}
+#score_section{
+	margin-top:30px;
+	text-align:left;
+	Width:70%;
+	font-size:1em;
+}
+#score_section p{
+
+}
+#score_section #high_score_p{
+	Float:right;
+}
+#game_section #start{
+	padding: 10px 20px; 
+	background-color: #302929; 
+	font-weight: 700; 
+	font-size:1.5em;
+	color :#116370;
+	border: none; 
+	margin: 40px; 
+	transition: 0.5s; 
+	box-shadow: 0 8px 5px -5px #116370;
+	border-radius:3px;
+}
+
+#game_box #game_info{
+	font-size:2em;
+	width :100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	text-align:center;
+	padding:10% 0;
+	font-weight:800;
+	color : #116370;
+	display:none; 
+	transition:0.4s;
+}
+
+#game_section #start:hover{
+	background-color: #252121; 
+	color: #409AA7 ;
+	cursor: pointer; 
+}
+	
+#game_box{
+	width:70%;
+	margin:auto;
+	background-color:#409AA7;
+	Margin-top:30px;
+	border-radius:5%;
+	text-align:center;
+	padding:2% 1%;
+	box-shadow:inset 0 0 10px #000000;
+	overflow:hidden;
+	position :relative;
+}
+	
+#game_section #level_select {
+	display:block;
+	text-align:center;
+	margin:auto;
+	font-size:1em;
+	background-color:#409AA7;
+	border:none;
+	color:#333;
+	border-radius:5px;
+	padding:5px;
+	font-weight:500;
+	cursor:pointer;
+}
+	
+.card{
+	Width:18%;
+	Margin:2% 2%;
+	Background-color:#116370;
+	Padding-top:18%;
+	Display:inline-block;
+	border-radius:10%;
+	box-shadow:inset 0 0 5px #000000;
+	background-image: url("https://i.ibb.co/SBCdMDN/42.jpg");
+	background-size:100% 100%; 
+	transition:0.2s;
+}
+
+footer{
+	background-color: white;
+	text-align: center; 
+	color: #b6dbb1; 
+	padding: 20px 0; 
+	letter-spacing: 2px; 
+	font-size: 13px; 
+	border-radius:5px 5px 0 0;
+}
+
+footer span{ 
+	Display:block;
+	color: #409aa7; 
+	font-weight: 700;
+	Margin:10px 0;
+	font-size:18px;
+}
+
+footer a {
+	text-decoration:none;
+}
+
+footer .pin-img{
+	Display:block;
+	margin:10px auto;
+	Width:30%;
+	max-width:100px;
+	border-radius:50%;
+	border: 3px solid #eee; 
+	box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); 
+}
+.clear{
+	Clear:both;
+}
+
+@media only screen and (max-width:766px){
+   
+	#game_box,#score_section{
+		width:90%;
+	}
+}

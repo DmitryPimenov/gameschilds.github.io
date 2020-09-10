@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="author" content="Dmitry Pimenov" />
+        <link rel="shortcut icon" href="https://i.ibb.co/Wp7193J/faon.jpg" type="image/jpg">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel='dns-prefetch' href='//s.w.org'/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	    <meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+		<script src = "https://kit.fontawesome.com/336692b553.js"></script>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="../css/login-ui1.css"/>
+	    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable = 0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+        <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <title>{% block title %} Games {% endblock %}</title>
+
+		<style>
+	
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
+
+html {
+	scroll-behavior:smooth;
+} 
+
+body { 
+margin:0;
+	padding:0; 
+}
+
+#logo {
+
+	font-weight:bold;
+	position:absolute ;
+	left:3%;
+	top:8%;
+	font-size:40px;
+	padding:1.5%;
+	color:white; 
+   
+	
+}
+
+
+.header {
+	background-image:url("https://i.ibb.co/Cnw2m8r/default-background.jpg");
+	background-attachment:fixed;
+	background-size:cover;
+	background-color:rgba(0,0,0,.3);
+	background-blend-mode:color; 
+	text-align:center;
+	
+	width:100%;
+	overflow:auto;
+	padding-bottom:15%;
+	
+}
+
+
+
+
+.headertext {
+	float:left;
+	width:70%;
+	text-align:left;
+	margin-left:10%;
+	padding-right:10%;
+	animation-duration:1s;
+	animation-iteration-count:1;
+	
+	animation-timing-function:linear;
+	animation-name:text;
+}
+
+@keyframes text {
+	0% {transform:scale(1.2);opacity:0;}
+	
+	100% {transform:scale(1.0);opacity:1.0;}
+}
+
+.header h1 {
+	color:black;
+	font-family:georgia;
+	font-weight:bold;
+	font-size:45px;
+}
+
+
+.header p {
+	color:black;
+	font-family:arial;
+	font-size:15px;
+	line-height:30px;
+	
+	font-weight:light;
+}
+
+
+.header button {
+	color:black;
+	padding:10px;
+	background:none;
+	border:2px solid white;
+	margin:1%;
+	transition:all 0.5s;
+	outline:none;
+	font-weight:bolder;
+	border-radius:0px 25px 0px 25px;
+}
+
+
+
+.header button:hover {
+	color:white;
+	background:black;
+}
+
+
+	.navbar {
+	background:none;
+	margin:0;
+	padding:0;
+}
+
+
+.header ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	width:100%;
+	overflow:auto;
+	float:left;
+	text-align:right;
+	height:auto;
+	background-color:#454545;
+	position:fixed;
+	top:0;
+	z-index:50;
+	
+}
+.header li {
+	display:inline-block ;
+	margin-left:3%;
+	padding:2.5%;
+	color:white;
+	outline:none;
+	text-decoration:none;
+	font-size:12px;
+	font-weight:bold;
+	
+	
+}
+
+
+.header li:hover {
+	border-bottom:2px solid white;
+}
+
+
+button.bar {
+	color:black;
+	font-weight:bold;
+	font-size:25px;
+	position:absolute;
+	right:5%;
+	top:6%;
+	border:none;
+	background:none;
+	outline:none;
+	
+	
+}
+
+button.search, button.searched {
+	
+	position:absolute;
+	right:20%;
+	top:6%;
+	border:none;
+	font-weight:bold;
+	background:none;
+	color:white;
+	font-size:25px;
+
+}
+button.search:hover {
+	background:none;
+	color:white;
+}
+
+
+.header i {
+	margin-right:5%;
+	font-size:20px;
+}
+
+
+.icons i {
+	color:white;
+	font-size:20px;
+	
+	
+
+}
+
+.icons {
+	margin-top:10%;
+
+	
+}
+
+@media screen and (min-width:600px) {
+	button.bar, button.search {
+		display:none;
+	}
+	
+	
+}
+
+
+@media screen and (max-width:600px) {
+	.header li {
+		display:block;
+		text-align:left;
+		outline:none;
+		padding-top:10%;
+		padding-bottom:20%;
+		color:white;
+		
+	
+	}
+	
+	.header a {
+		outline:none;
+		text-decoration:none;
+	}
+	
+	
+	.header li:hover {
+		border-bottom:2px solid #454545;
+		
+  }
+
+	.header ul {
+		position:absolute ;
+		height:0vh;
+		top:0%;
+		width:80%;
+		padding-left:10%;
+		padding-right:10%;
+		
+   background:rgba(116,155,255,.67);
+   transition:height 0.3s;
+
+}
+}
+
+
+.icons i {
+	color:white;
+	font-size:15px;
+	display:block;
+	margin-bottom:100%;
+
+}
+
+
+.icons {
+	position:absolute ;
+	right:5%;
+	
+}
+
+
+.it {
+	padding:3%;
+	background:#454545 ;
+	border-radius:25px 25px;
+	border:2px solid white;
+	position:absolute;
+	top:8%;
+	right:20%;
+	outline:none;
+
+	color:white;
+	
+}
+
+.searchbox {
+	display:none;
+}
+
+.about {
+	width:85%;
+	margin-left:7.5%;
+	padding-right:7.5%;
+}
+.about p{
+	line-height:30px;
+	font-size:18px;
+	font-family:arial;
+	color:rgba(0,0,0,.3);
+}
+
+.about h1 {
+	font-family:georgia;
+	font-size:40px;
+}
+
+
+.about i {
+	margin:1px;
+	padding:15px;  background:rgba(0,0,0,.3);
+	text-align:center;
+	transition:all 1s;
+}
+
+.about i:hover  {
+	background:rgba(0,0,0,.3);
+}
+
+.services {
+	background-image:url("https://i.ibb.co/Cnw2m8r/default-background.jpg");
+	background-attachment:fixed;
+	background-size:cover;
+	background-color:rgba(0,0,0,.3);
+	background-blend-mode:color;
+	overflow:auto;
+	width:100%;
+	text-align:center;
+	color:black;
+}
+
+.insurance {
+	float:left;
+	width:25%;
+	height:auto;
+	border:1px solid black;
+	margin-left:2%;
+	padding:2.5%;
+	color:black;
+	text-align:center;
+	margin-bottom:10%;
+	
+
+}
+
+
+@media screen and (max-width:600px) {
+	.insurance {
+		width:70%;
+		margin-left:5%;
+		padding:10%;
+		margin-bottom:10%;
+	}
+}
+
+
+.insurance p {
+
+	font-weight:lighter ;
+}
+
+
+
+.insurance button {
+	color:black;
+	padding:15px;
+	background:none;
+	border:1px solid black;
+	margin:1%;
+	transition:all 0.5s;
+	outline:none;
+	font-weight:bolder;
+	border-radius:0px 25px 0px 25px;
+}
+
+.insurance button:hover {
+	color:white;
+	background:black;
+}
+
+.insurance i {
+	font-size:50px;
+}
+
+
+.contact {
+	width:100%;
+	background-image:url("");
+	background-attachment:fixed;
+	background-size:cover;
+	background-color:white;
+	background-blend-mode:color;
+	border:none;
+	
+}
+
+.contact2 {
+	background-color:rgba(0,0,0,.3);
+	width:90%;
+	margin-left:5%;
+	border-left:3px solid white;
+	border-right:3px solid white;
+	border-radius:0px 25px 0px 25px;
+}
+
+.contact input, textarea {
+	
+	padding:20px;
+	margin-bottom:10%;
+	background:none;
+	border:none;
+	margin-left:5%;
+	border-bottom:2px solid white;
+	color:white;
+	outline:none;
+	width:50%;
+} 
+
+textarea {
+	height:50px;
+	margin-left:20%;
+}
+
+.contact i {
+	color:white;
+	margin-left:15%;
+	
+  }
+
+  
+  .text {
+	  color:white;
+	  width:70%;
+	  text-align:center;
+	  font-weight:bold;
+	  margin-left:15%;
+  }
+  
+  
+  .text p {
+	  color:whitesmoke;
+  }
+  
+  .icon {
+	  text-align:center;
+  }
+  
+  .icon i {
+	   margin:4%;
+	   text-align:center;
+  }
+  
+  
+  
+  .contact button {
+	color:black;
+	padding:15px;
+	background:none;
+	border:1px solid white;
+	margin:1%;
+	transition:all 0.5s;
+	outline:none;
+	width:40%;
+	font-weight:bolder;
+	border-radius:0px 25px 0px 25px;
+	margin-left:20%;
+}
+
+.contact button:hover {
+	color:white;
+	background:black;
+}
+
+
+.comments {
+	background:white;
+	overflow:auto;
+	width:100%;
+	height:auto;
+	text-align:center;
+	color:black;
+
+}
+
+
+
+footer {
+	text-align:center;
+	background-image:url("");
+	background-attachment:fixed;
+	background-size:cover;
+	background-color:rgba(0,0,0,.3);
+	background-blend-mode:color; 
+	border:none;
+	
+}
+
+footer i {
+	margin:1px;
+	padding:15px;  background:rgba(0,0,0,.3);
+	text-align:center;
+	transition:all 1s;
+
+}
+
+footer i:hover  {
+	background:black;
+	
+}
+footer h1 {
+	color:black;
+	font-family:georgia;
+}
+
+footer p {
+	color:black;
+	line-height:30px;
+	font-size:15px;
+}
+
+.client1, .client2, .client3{
+	
+	float:left;
+	width:25%;
+	height:auto;
+	border-top:1px solid rgba(0,0,0,.3);
+	box-shadow:0px 0.5px 20px rgba(0,0,0,.3);
+	margin-left:2%;
+	padding:2.5%;
+	color:black;
+	text-align:center;
+	margin-bottom:10%;
+	border-radius:10px 10px 10px 10px;
+	margin-top:10%;
+
+
+}
+
+
+
+.client1 {
+	display:block;
+}
+
+
+
+.comments {
+	overflow-y:hidden;
+}
+
+@media screen and (max-width:600px) {
+  .client1, .client2, .client3
+		  {
+		width:70%;
+		margin-left:5%;
+		padding:10%;
+		margin-bottom:10%;
+	}
+}
+.client1 p, .client2 p, .client3 p
+
+	{
+
+	font-weight:lighter ;
+}
+
+
+
+.comments img {
+	width:100px;
+	height:110px;
+	border-radius:50%;
+	
+}
+
+p {
+	font-size:15px;
+	font-weight:lighter;
+}
+
+   
+ .gallery {
+	 text-align:center;
+	 color:black;
+	 overflow:auto;
+	 width:100%;
+	 overflow-y:hidden;
+ }
+
+
+
+.images {
+	width:40%;
+	margin-left:5%;
+	margin-right:5%;
+	float:left;
+	height:20vh;
+	margin-bottom:5%;
+  
+	}
+
+.images img {
+	width:100%;
+	height:100%;
+}
+</style>
+</head>
+<body>
+{% block body %}
+<div class="header">
+	
+	<form class="searchbox">
+	<input type="search" value="Search..." class="it">
+	<button class="searched"><i class="fa fa-search"></i></button>
+	</form>
+	
+	 <button class="search" onclick="openSearch()"><i class="fa fa-search"></i></button>
+	
+	<button class="bar" onclick="openMenu()"><i class="fa fa-bars"></i></button>
+	
+
+	
+	<div class="navbar" onclick="closeMenu()">
+	
+			<ul>
+			<a href="http://gameschilds.herokuapp.com/"><li><i class="fa fa-home"></i>Home</li></a>
+			
+			<a href="#about"><li><i class="fas fa-users"></i>About </li></a>
+			<!--<a href="#contact"><li><i class="fas fa-envelope"></i>Contact</li></a>-->
+			<a href="#services"><li><i class="fas fa-handshake"></i>Games</li></a>
+			
+	   <!--<a href="#gallery"><li><i class="fas fa-camera"></i>Gallery</li></a>-->
+                <a href="#service"><li><i class="fas fa-handshake"></i>Applications</li></a>
+				<a href="http://gameschilds.herokuapp.com/users"><li><i class="fas fa-users"></i>Users</li></a>
+       <!--<a href="#comments"><li><i class="fas fa-envelope"></i>Our Clients Says</li></a>-->
+		</ul>
+	</div>
+
+	<div class="cancel"  onclick="closeSearch()">
+		
+	   <br><br> <br><br><br><br><br>
+	</div>
+	<div>
+	<div class="headertext">
+		<h1>Children's educational games</h1>
+		   <p> <br> </p>   
+		<br>
+	   <a href="#about"><button type="submit" name="about">Know More</button></a>
+		<a href="#services"><button type="submit" name="about">Games</button></a>
+	   <a href="http://gameschilds.herokuapp.com/login"><button type="submit" name="about">Sign in</button></a>
+      <!--<a href="#services"><button type="submit" name="about">Applications</button></a>-->
+		<br><br><br>
+			<br><br>
+	 </div>
+		
+	  </div>
+	<br><br>
+		
+			
+<div class="icons">
+
+<br><br>
+		
+	<a href = "https://www.facebook.com/dpmiimternyov"><i class="social-icon fab fa-facebook-f"></i></a>
+	<a href = "https://www.instagram.com/pimenovdmitry"><i class="social-icon fab fa-instagram"></i></a>
+	<a href = "https://twitter.com/pimenovdv"><i class="social-icon fab fa-twitter"></i></a>
+	<a href = "https://github.com/DmitryPimenov"><i class="social-icon fab fa-github"></i></a>
+	<a href = "https://дмитрий-пименов-984a22a8"><i class="social-icon fab fa-linkedin"></i></a>
+	<a href = "https://www.pinterest.ru/dmitrynetmail/boards"><i class="social-icon fab fa-pinterest"></i></a>
+		
+		</div>		  <br><br>
+		
+			
+	</div>
+
+	<div class="about" id="about" data-aos="fade-bottom">
+	<br>
+	<h1>Children's educational games</h1>
+	
+	
+		<p>
+		<b> - development site for children and their parents</b>
+<br><br>
+</p>
+<br><a href = "https://www.facebook.com/dpmiimternyov"><i class="social-icon fab fa-facebook-f"></i></a>
+	<a href = "https://www.instagram.com/pimenovdmitry"><i class="social-icon fab fa-instagram"></i></a>
+	<a href = "https://twitter.com/pimenovdv"><i class="social-icon fab fa-twitter"></i></a>
+	<a href = "https://github.com/DmitryPimenov"><i class="social-icon fab fa-github"></i></a>
+	<a href = "https://дмитрий-пименов-984a22a8"><i class="social-icon fab fa-linkedin"></i></a>
+	<a href = "https://www.pinterest.ru/dmitrynetmail/boards"><i class="social-icon fab fa-pinterest"></i></a>
+
+	   <br><br><br>
+	</div>
+	
+	<div style="text-align:center">
+	
+	</div>
+	
+	<div class="services" id="services">
+	
+	<br><br><br>
+		<h1>Games</h1>
+		
+		<br><br>
+	
+	
+   <div class="insurance" data-aos="fade-right">  
+     <a href="http://gameschilds.herokuapp.com/chess">
+   <br>
+   <h2><b>Chess</b></h2>
+   
+	   <p></p>
+	   <br>
+	   
+	   <button>P L A Y</button>
+     </a>
+   </div>
+		
+
+<div class="insurance" data-aos="fade-up"> 
+   
+   <a href="http://gameschilds.herokuapp.com/memory">
+   <br>
+  <h2><b>Memory</b></h2>
+	   <p></p>
+	   <br>
+	   
+	   <button>P L A Y</button>
+  </a>
+   </div>
+   
+ 
+   <div class="insurance" data-aos="fade-left"> 
+     <a href="http://gameschilds.herokuapp.com/Schulte">
+   <br>
+   <h2><b>Schulte table</b></h2>
+   
+	   <p></p>
+	   <br>
+	   
+	   <button>P L A Y</button>
+     </a>
+   </div>
+   
+   <div class="insurance" data-aos="fade-right">  
+     <a href="http://gameschilds.herokuapp.com/puzzles">
+   <br>
+   <h2><b>Puzzle</b></h2>
+   
+	   <p></p>
+	   <br>
+	   
+	   <button>P L A Y</button>
+     </a>
+   </div>
+		<div class="insurance" data-aos="fade-up">
+
+   <a href="http://gameschilds.herokuapp.com/number">
+   <br>
+  <h2><b>Number puzzle</b></h2>
+	   <p></p>
+	   <br>
+
+	   <button>P L A Y</button>
+  </a>
+   </div>
+       <div class="insurance" data-aos="fade-left"> 
+     <a href="http://gameschilds.herokuapp.com//bingo">
+   <br>
+   <h2><b>Tic-Tac-Toe</b></h2>
+   
+	   <p></p>
+	   <br>
+	   
+	   <button>P L A Y</button>
+     </a>
+   </div>
+   <br><br><br>
+   </div>
+   
+   <!--<div class="gallery" id="gallery">
+	   
+	  <br><br>
+	  <div style="width:70%;padding-left:15%;padding-right:15%">
+	  
+	  <br><br><br>
+	  <h1>Gallery</h1>
+	  
+	  <p></p>
+	   
+	   </div>
+	   <br>
+	  <div class="images" data-aos="fade-up">
+	  <img src="https://i.ibb.co/SNB9Htq/photo-2020-08-30-01-54-22.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+		</div>
+	   
+	   
+		   <div class="images" data-aos="fade-up">
+	  <img src="https://i.ibb.co/sFHGf54/photo-2020-08-31-23-33-02.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+		</div>
+	   
+	   
+		  <div class="images" data-aos="fade-up">
+	  <img src="https://i.ibb.co/fFHF5Y2/photo-2020-08-30-01-54-17.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+		</div>
+	   
+	   
+	   
+	   <div class="images" data-aos="fade-up">
+	  <img src="https://i.ibb.co/MSxfjJL/photo-2020-08-30-01-54-12.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+		</div>
+		
+		
+			<div class="images" data-aos="fade-up">
+	  <img src="https://i.ibb.co/rymWjYQ/photo-2020-08-31-23-32-52.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+		</div>
+		
+		
+		
+		  <div class="images" data-aos="fade-up">
+	  <img src="https://i.ibb.co/M7s5yZp/photo-2020-08-30-01-54-02.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+     </div>
+	   
+  </div>
+   
+   <div class="contact" id="contact">
+   <br><br><br>
+   <div class="text">
+   <h2>Get in Touch</h2>
+   <p></p>
+   </div>
+   <br>
+   
+   
+   
+	<form class="contact2" data-aos="zoom-in">
+	  <br><br><br><br><br>
+    <i class="fas fa-user"></i>
+	<input type="text" value="Your Name"><br>
+	<i class="fas fa-envelope"></i>	<input type="email" value="Your Email"><br>
+	
+	 <i class="fas fa-phone"></i>
+	<input type="tel" value="Your Phone"><br>
+ <textarea>Your Message</textarea>
+ <br>
+ <button>Submit</button>
+ <br>
+ <div class="icon">
+ 
+	 <a href = "https://www.facebook.com/dpmiimternyov"><i class="social-icon fab fa-facebook-f"></i></a>
+	<a href = "https://www.instagram.com/pimenovdmitry"><i class="social-icon fab fa-instagram"></i></a>
+	<a href = "https://twitter.com/pimenovdv"><i class="social-icon fab fa-twitter"></i></a>
+	<a href = "https://github.com/DmitryPimenov"><i class="social-icon fab fa-github"></i></a>
+	<a href = "https://дмитрий-пименов-984a22a8"><i class="social-icon fab fa-linkedin"></i></a>
+	<a href = "https://www.pinterest.ru/dmitrynetmail/boards"><i class="social-icon fab fa-pinterest"></i></a>
+
+		</div>
+		<br><br>
+	 </form>
+	   
+	 <br><br><br>   
+   </div>-->
+  
+  <div class="services" id="service">
+	
+   <br><br><br>
+   <h1>Applications</h1>
+    
+  	  <div class="insurance" data-aos="fade-up-right">
+	  
+	  <br>
+	  
+	      <img src="">
+		  <a href="http://gameschilds.herokuapp.com/slide_anim"><button>Click</button></a>
+  <!-- <i class="fas fa-user-shield"></i>-->
+   <br>
+   <h2><b>Stereo pictures</b></h2>
+   
+	   <p></p>
+	   <br>
+	   
+	   
+   </div>
+		
+   <div class="insurance" data-aos="fade-up">
+   <br>
+	   <img src="">
+	   <a href="http://gameschilds.herokuapp.com/weat"><button>Click</button></a>
+   <!--<i class="fas fa-shield-alt"></i>-->
+   <br>
+   
+   <h2><b>Weather</b></h2>
+	   <p></p>
+	   <br>
+	   
+	   
+	   
+   </div>
+   
+  <div class="insurance" data-aos="fade-up-left">
+   
+   <br>
+   
+      <img src="">
+	  <a href="http://gameschilds.herokuapp.com/paint"><button>Click</button></a>
+ <!--  <i class="fas fa-shield-alt"></i>-->
+   <h2><b>Paint</b></h2>
+   
+	   <p></p>
+	   <br>
+	   
+	   
+	   
+   </div>
+ 
+  </div>
+  
+  <div class="comments" id="comments">
+	
+   <br><br><br>
+   <h1>Our Clients Says</h1>
+	
+   
+	  <div class="client1" data-aos="fade-up-right">
+	  
+	  <br>
+	  
+	<img src="https://pw.artfile.me/wallpaper/19-07-2017/650x406/marilyn-monroe-risovannoe-lyudi-portret--1195992.jpg">
+  <!-- <i class="fas fa-user-shield"></i>-->
+   <br>
+   <h2><b>Vera Karabasova</b></h2>
+   
+	   <p>I liked the selection of games and activities very much! I am a psychologist by education and therefore I can rate this application perfectly! My child is delighted!</p>
+	   <br>
+	   
+	   
+   </div>
+		
+   <div class="client2" data-aos="fade-up">
+   <br>
+	<img src="https://bzh.life/wp-content/uploads/2020/07/5.jpg">
+   <!--<i class="fas fa-shield-alt"></i>-->
+   <br>
+   
+   <h2><b>Oleg Smirnov</b></h2>
+	   <p>A very good project :-)! Excellent trainer, the best site of all! Thank!</p>
+	   <br>
+	   
+	   
+	   
+   </div>
+   
+  <div class="client3" data-aos="fade-up-left">
+   
+   <br>
+   
+   <img src="https://c.wallhere.com/photos/17/a6/model_portrait_men_Leonardo_DiCaprio-21865.jpg!d">
+   
+ <!--  <i class="fas fa-shield-alt"></i>-->
+   <h2><b>Petr Morozov</b></h2>
+   
+	   <p>The child is delighted. I think even parents will be interested in individual games, and the child will really be able to satisfy his intellectual hunger) Thanks to the developers</p>
+	   <br>
+	   
+	   
+	   
+   </div>
+ 
+  </div>
+ 
+	 <div style="text-align:center">
+	<!--<i class="fas fa-shield-alt" style="font-size:60px;position:relative;z-index:20;top:30px;color:rgba(0,0,0,.3)"></i>-->
+	</div>
+	
+	
+	{% endblock %}
+	
+	<footer>
+	
+	<div style="padding:5%" data-aos="fade-up">
+		<br>
+		<h1>Children's educational games</h1>
+		<br>
+		 <p></p>
+		
+		<a href = "https://www.facebook.com/dpmiimternyov"><i class="social-icon fab fa-facebook-f"></i></a>
+	<a href = "https://www.instagram.com/pimenovdmitry"><i class="social-icon fab fa-instagram"></i></a>
+	<a href = "https://twitter.com/pimenovdv"><i class="social-icon fab fa-twitter"></i></a>
+	<a href = "https://github.com/DmitryPimenov"><i class="social-icon fab fa-github"></i></a>
+	<a href = "https://дмитрий-пименов-984a22a8"><i class="social-icon fab fa-linkedin"></i></a>
+	<a href = "https://www.pinterest.ru/dmitrynetmail/boards"><i class="social-icon fab fa-pinterest"></i></a>
+
+		<br><br><br>
+		
+		<p>Copyright &copy; 2020 Designed by <b style="color:white">Dmitry Pimenov</b></p>
+		
+		 <a href="#" style="outline:none"><i class="
+fa fa-angle-up" style="position:absolute;bottom:2%;right:5%;padding:15px;font-size:30px;color:white;background:rgba(0,0,0,.3);"></i></a>
+	
+		</div>
+	</footer>
+	
+	<script> 
+!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.AOS=t():e.AOS=t()}(this,function(){return function(e){function t(o){if(n[o])return n[o].exports;var i=n[o]={exports:{},id:o,loaded:!1};return e[o].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}var n={};return t.m=e,t.c=n,t.p="dist/",t(0)}([function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var i=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(e[o]=n[o])}return e},r=n(1),a=(o(r),n(6)),u=o(a),c=n(7),f=o(c),s=n(8),d=o(s),l=n(9),p=o(l),m=n(10),b=o(m),v=n(11),y=o(v),g=n(14),h=o(g),w=[],k=!1,x=document.all&&!window.atob,j={offset:120,delay:0,easing:"ease",duration:400,disable:!1,once:!1,startEvent:"DOMContentLoaded",throttleDelay:99,debounceDelay:50,disableMutationObserver:!1},O=function(){var e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];if(e&&(k=!0),k)return w=(0,y.default)(w,j),(0,b.default)(w,j.once),w},_=function(){w=(0,h.default)(),O()},S=function(){w.forEach(function(e,t){e.node.removeAttribute("data-aos"),e.node.removeAttribute("data-aos-easing"),e.node.removeAttribute("data-aos-duration"),e.node.removeAttribute("data-aos-delay")})},z=function(e){return e===!0||"mobile"===e&&p.default.mobile()||"phone"===e&&p.default.phone()||"tablet"===e&&p.default.tablet()||"function"==typeof e&&e()===!0},A=function(e){return j=i(j,e),w=(0,h.default)(),z(j.disable)||x?S():(document.querySelector("body").setAttribute("data-aos-easing",j.easing),document.querySelector("body").setAttribute("data-aos-duration",j.duration),document.querySelector("body").setAttribute("data-aos-delay",j.delay),"DOMContentLoaded"===j.startEvent&&["complete","interactive"].indexOf(document.readyState)>-1?O(!0):"load"===j.startEvent?window.addEventListener(j.startEvent,function(){O(!0)}):document.addEventListener(j.startEvent,function(){O(!0)}),window.addEventListener("resize",(0,f.default)(O,j.debounceDelay,!0)),window.addEventListener("orientationchange",(0,f.default)(O,j.debounceDelay,!0)),window.addEventListener("scroll",(0,u.default)(function(){(0,b.default)(w,j.once)},j.throttleDelay)),j.disableMutationObserver||(0,d.default)("[data-aos]",_),w)};e.exports={init:A,refresh:O,refreshHard:_}},function(e,t){},,,,,function(e,t){(function(t){"use strict";function n(e,t,n){function o(t){var n=b,o=v;return b=v=void 0,k=t,g=e.apply(o,n)}function r(e){return k=e,h=setTimeout(s,t),_?o(e):g}function a(e){var n=e-w,o=e-k,i=t-n;return S?j(i,y-o):i}function c(e){var n=e-w,o=e-k;return void 0===w||n>=t||n<0||S&&o>=y}function s(){var e=O();return c(e)?d(e):void(h=setTimeout(s,a(e)))}function d(e){return h=void 0,z&&b?o(e):(b=v=void 0,g)}function l(){void 0!==h&&clearTimeout(h),k=0,b=w=v=h=void 0}function p(){return void 0===h?g:d(O())}function m(){var e=O(),n=c(e);if(b=arguments,v=this,w=e,n){if(void 0===h)return r(w);if(S)return h=setTimeout(s,t),o(w)}return void 0===h&&(h=setTimeout(s,t)),g}var b,v,y,g,h,w,k=0,_=!1,S=!1,z=!0;if("function"!=typeof e)throw new TypeError(f);return t=u(t)||0,i(n)&&(_=!!n.leading,S="maxWait"in n,y=S?x(u(n.maxWait)||0,t):y,z="trailing"in n?!!n.trailing:z),m.cancel=l,m.flush=p,m}function o(e,t,o){var r=!0,a=!0;if("function"!=typeof e)throw new TypeError(f);return i(o)&&(r="leading"in o?!!o.leading:r,a="trailing"in o?!!o.trailing:a),n(e,t,{leading:r,maxWait:t,trailing:a})}function i(e){var t="undefined"==typeof e?"undefined":c(e);return!!e&&("object"==t||"function"==t)}function r(e){return!!e&&"object"==("undefined"==typeof e?"undefined":c(e))}function a(e){return"symbol"==("undefined"==typeof e?"undefined":c(e))||r(e)&&k.call(e)==d}function u(e){if("number"==typeof e)return e;if(a(e))return s;if(i(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=i(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(l,"");var n=m.test(e);return n||b.test(e)?v(e.slice(2),n?2:8):p.test(e)?s:+e}var c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},f="Expected a function",s=NaN,d="[object Symbol]",l=/^\s+|\s+$/g,p=/^[-+]0x[0-9a-f]+$/i,m=/^0b[01]+$/i,b=/^0o[0-7]+$/i,v=parseInt,y="object"==("undefined"==typeof t?"undefined":c(t))&&t&&t.Object===Object&&t,g="object"==("undefined"==typeof self?"undefined":c(self))&&self&&self.Object===Object&&self,h=y||g||Function("return this")(),w=Object.prototype,k=w.toString,x=Math.max,j=Math.min,O=function(){return h.Date.now()};e.exports=o}).call(t,function(){return this}())},function(e,t){(function(t){"use strict";function n(e,t,n){function i(t){var n=b,o=v;return b=v=void 0,O=t,g=e.apply(o,n)}function r(e){return O=e,h=setTimeout(s,t),_?i(e):g}function u(e){var n=e-w,o=e-O,i=t-n;return S?x(i,y-o):i}function f(e){var n=e-w,o=e-O;return void 0===w||n>=t||n<0||S&&o>=y}function s(){var e=j();return f(e)?d(e):void(h=setTimeout(s,u(e)))}function d(e){return h=void 0,z&&b?i(e):(b=v=void 0,g)}function l(){void 0!==h&&clearTimeout(h),O=0,b=w=v=h=void 0}function p(){return void 0===h?g:d(j())}function m(){var e=j(),n=f(e);if(b=arguments,v=this,w=e,n){if(void 0===h)return r(w);if(S)return h=setTimeout(s,t),i(w)}return void 0===h&&(h=setTimeout(s,t)),g}var b,v,y,g,h,w,O=0,_=!1,S=!1,z=!0;if("function"!=typeof e)throw new TypeError(c);return t=a(t)||0,o(n)&&(_=!!n.leading,S="maxWait"in n,y=S?k(a(n.maxWait)||0,t):y,z="trailing"in n?!!n.trailing:z),m.cancel=l,m.flush=p,m}function o(e){var t="undefined"==typeof e?"undefined":u(e);return!!e&&("object"==t||"function"==t)}function i(e){return!!e&&"object"==("undefined"==typeof e?"undefined":u(e))}function r(e){return"symbol"==("undefined"==typeof e?"undefined":u(e))||i(e)&&w.call(e)==s}function a(e){if("number"==typeof e)return e;if(r(e))return f;if(o(e)){var t="function"==typeof e.valueOf?e.valueOf():e;e=o(t)?t+"":t}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(d,"");var n=p.test(e);return n||m.test(e)?b(e.slice(2),n?2:8):l.test(e)?f:+e}var u="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},c="Expected a function",f=NaN,s="[object Symbol]",d=/^\s+|\s+$/g,l=/^[-+]0x[0-9a-f]+$/i,p=/^0b[01]+$/i,m=/^0o[0-7]+$/i,b=parseInt,v="object"==("undefined"==typeof t?"undefined":u(t))&&t&&t.Object===Object&&t,y="object"==("undefined"==typeof self?"undefined":u(self))&&self&&self.Object===Object&&self,g=v||y||Function("return this")(),h=Object.prototype,w=h.toString,k=Math.max,x=Math.min,j=function(){return g.Date.now()};e.exports=n}).call(t,function(){return this}())},function(e,t){"use strict";function n(e,t){var n=new r(o);a=t,n.observe(i.documentElement,{childList:!0,subtree:!0,removedNodes:!0})}function o(e){e&&e.forEach(function(e){var t=Array.prototype.slice.call(e.addedNodes),n=Array.prototype.slice.call(e.removedNodes),o=t.concat(n).filter(function(e){return e.hasAttribute&&e.hasAttribute("data-aos")}).length;o&&a()})}Object.defineProperty(t,"__esModule",{value:!0});var i=window.document,r=window.MutationObserver||window.WebKitMutationObserver||window.MozMutationObserver,a=function(){};t.default=n},function(e,t){"use strict";function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function o(){return navigator.userAgent||navigator.vendor||window.opera||""}Object.defineProperty(t,"__esModule",{value:!0});var i=function(){function e(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}return function(t,n,o){return n&&e(t.prototype,n),o&&e(t,o),t}}(),r=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,a=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,u=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i,c=/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,f=function(){function e(){n(this,e)}return i(e,[{key:"phone",value:function(){var e=o();return!(!r.test(e)&&!a.test(e.substr(0,4)))}},{key:"mobile",value:function(){var e=o();return!(!u.test(e)&&!c.test(e.substr(0,4)))}},{key:"tablet",value:function(){return this.mobile()&&!this.phone()}}]),e}();t.default=new f},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e,t,n){var o=e.node.getAttribute("data-aos-once");t>e.position?e.node.classList.add("aos-animate"):"undefined"!=typeof o&&("false"===o||!n&&"true"!==o)&&e.node.classList.remove("aos-animate")},o=function(e,t){var o=window.pageYOffset,i=window.innerHeight;e.forEach(function(e,r){n(e,i+o,t)})};t.default=o},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var i=n(12),r=o(i),a=function(e,t){return e.forEach(function(e,n){e.node.classList.add("aos-init"),e.position=(0,r.default)(e.node,t.offset)}),e};t.default=a},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var i=n(13),r=o(i),a=function(e,t){var n=0,o=0,i=window.innerHeight,a={offset:e.getAttribute("data-aos-offset"),anchor:e.getAttribute("data-aos-anchor"),anchorPlacement:e.getAttribute("data-aos-anchor-placement")};switch(a.offset&&!isNaN(a.offset)&&(o=parseInt(a.offset)),a.anchor&&document.querySelectorAll(a.anchor)&&(e=document.querySelectorAll(a.anchor)[0]),n=(0,r.default)(e).top,a.anchorPlacement){case"top-bottom":break;case"center-bottom":n+=e.offsetHeight/2;break;case"bottom-bottom":n+=e.offsetHeight;break;case"top-center":n+=i/2;break;case"bottom-center":n+=i/2+e.offsetHeight;break;case"center-center":n+=i/2+e.offsetHeight/2;break;case"top-top":n+=i;break;case"bottom-top":n+=e.offsetHeight+i;break;case"center-top":n+=e.offsetHeight/2+i}return a.anchorPlacement||a.offset||isNaN(t)||(o=t),n+o};t.default=a},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e){for(var t=0,n=0;e&&!isNaN(e.offsetLeft)&&!isNaN(e.offsetTop);)t+=e.offsetLeft-("BODY"!=e.tagName?e.scrollLeft:0),n+=e.offsetTop-("BODY"!=e.tagName?e.scrollTop:0),e=e.offsetParent;return{top:n,left:t}};t.default=n},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e){return e=e||document.querySelectorAll("[data-aos]"),Array.prototype.map.call(e,function(e){return{node:e}})};t.default=n}])});
+	</script>
+	
+	<script> 
+    AOS.init({
+	easing: 'ease-out',
+	duration: 500, 
+	
+	
+    }); 
+    </script>
+      <script>
+//Nav bar Mobile 
+
+function openMenu() {
+	
+	var open = document.querySelector("ul");
+	
+open.style.height="100vh";
+
+
+};
+
+
+function closeMenu() {
+
+	var close = document.querySelector("ul");
+
+	close.style.height="0vh";   
+	
+};
+
+ 
+//Search Bar mobile
+
+function openSearch() {
+
+	var openSearch = document.querySelector(".searchbox");
+	
+	
+	
+	openSearch.style.display= "block";
+	
+	
+	document.querySelector(".search").style.display="none";
+	  
+}
+
+
+function closeSearch() {
+
+	var closeSearch = document.querySelector(".searchbox")
+	closeSearch.style.display= "none";
+		   document.querySelector(".search").style.display="block";
+	  
+};
+      </script>
+
+</body>
+</html>

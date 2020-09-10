@@ -1,0 +1,57 @@
+.block1{ 
+	display:inline-block; 
+	width:auto; 
+	flex-basis:20%; 
+	padding-top:6%;
+	padding-bottom:6%; 
+	text-align:center; 
+	color:#000; 
+	font-weight:bold; 
+	font-size:25px; 
+	border:1px solid #000;
+	background-color:#DDDDDD; 
+	box-sizing:border-box; 
+	transition:opacity 100ms linear,
+	background-color 200ms linear; 
+	cursor:pointer; 
+}	  
+#game{ 
+	width:80%; 
+	max-width:500px; 
+	margin:20px auto; 
+	display:flex; 
+	flex-wrap:wrap; 
+} 
+#timer{ 
+	font-weight:bold; 
+	font-size:20px; 
+	text-align:center; 
+	visibility:hidden; 
+} 
+#result{ 
+	margin-top:5px; 
+	font-weight:bold; 
+	font-size:30px; 
+	text-align:center; 
+} 
+#check{ 
+	margin-top:5px; 
+	font-weight:bold; 
+	font-size:30px; 
+	text-align:center; 
+	visibility:hidden; 
+} 
+#start_button{ 
+	display:block; 
+	margin:30px auto; 
+	width:125px; 
+	font-family:Tahoma; 
+	font-weight:bold; 
+	font-size:45px; 
+} 
+#restart{ 
+	margin-top:5px; 
+	font-weight:bold; 
+	font-size:30px; 
+	text-align:center;	  
+} 

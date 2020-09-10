@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8"> 
+		<link rel="stylesheet" href="chess.css"/>
+    <script defer src="chess.js"></script>
+	</head>
+	<body onload="init()">
+		<div id="divboard">
+			<table id="board"></table>
+		</div>
+		<div id="divedit">
+			<table id="edit"></table>
+		</div>
+		<button onclick="setStartPos()">Reset</button>
+		<button onclick="moveTest()">Demo</button>
+		<button onclick="loadPos()" >Set pos</button>
+		<button onclick="loadFEN()" >From FEN</button>
+		<button onclick="pgnDemo1()" >Simple Pgn demo</button>
+	<br />
+		<button onclick="pgnDemo2()" >Pgn with annotations</button>
+		<button id="bnedit" onclick="editBoard()">Edit</button> 
+		<button onclick="Rotate()">Rotate</button> 
+		<button onclick="Stop()">Stop</button> 
+		<button onclick="BoardToFEN()">Save FEN</button> 
+	<br />
+		<button id="bnplay" onclick="Play()">Play</button> 
+		<button onclick="TakeBack()">Take back</button> 
+		<button onclick="Suggest()">Suggest</button> 
+		<button id="bnauto" onclick="Auto()">Autoplay</button> 
+		<div id="toMove"></div>	
+		<div id="log"></div>	
+	</body>
+</html>

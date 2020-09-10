@@ -1,0 +1,387 @@
+body {
+	margin: 0;
+	background: white;
+	font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 1140px; /*ширина сайта*/
+	margin: 0 auto; /* выравнивание сайта по центру экрана */
+}
+
+.btn {
+	width: 136px;
+	height: 41px;
+	border-radius: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 8px 23px;
+	box-sizing: border-box;
+}
+
+.btn-fill {
+	background-color: #c3fd12;
+}
+
+.btn-fill a {
+	color: #292d1d;
+	text-decoration: none;
+}
+
+
+.btn-transparent {
+	border: 1px solid #00aeef;
+}
+
+.btn-transparent a {
+	color: #00aeef;
+	text-decoration: none;
+}
+
+.btn-fill a:hover,
+.btn-transparent a:hover {
+	text-decoration: underline;
+}
+
+/*********************Начало стилей шапки**********************/
+
+.top-menu {
+	background: #353535;
+}
+
+
+.top-menu-list li {
+	display: inline-block;
+	padding: 16px 20px;
+	box-sizing: border-box;
+    list-style: none;
+}
+
+.top-menu-list li:first-child {
+	padding-left: 0;
+}
+
+.top-menu-list li:last-child {
+	padding-right: 0;
+}
+
+.top-menu-list a {
+	color: white;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.top-menu-list a:hover {
+	text-decoration: underline;
+}
+
+.header-container {
+	overflow: auto;
+}
+
+.logo {
+	float: left;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.contacts {
+	float: right;
+	padding-top: 49px;
+}
+
+.contacts a {
+	text-decoration: none;
+	color: #1e1e1e;
+	font-size: 18px;
+}
+
+.contacts a:hover {
+	color: #c3fd12;
+	text-decoration: underline;
+}
+
+.header-item {
+	float: right;
+	padding-top: 48px;
+	padding-right: 108px;
+}
+
+.header-item a {
+	text-decoration: none;
+	color: #1e1e1e;
+	font-size: 16px;
+	border-bottom: 1px dotted #1e1e1e;
+}
+
+.header-item a:hover {
+	border: none;
+	text-decoration: underline;
+}
+
+.main-menu {
+	background-color: #e0e0e0;
+}
+
+.main-menu-list li {
+	display: inline-block;
+	padding: 24px 36px;
+	box-sizing: border-box;
+    list-style: none;
+}
+
+.main-menu-list li:first-child {
+	padding-left: 0;
+}
+
+.main-menu-list li:last-child {
+	padding-right: 0;
+}
+
+.main-menu-list a {
+	color: #1e1e1e;
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.main-menu-list a:hover {
+	color: #a6a6a6;
+	text-decoration: underline;
+}
+/*********************Конец стилей шапки**********************/
+
+/*********************Начало стилей content**********************/
+
+/*********************Начало стилей section**********************/
+.content {
+	margin-top: 35px;
+
+}
+
+.content .container {	
+	overflow: auto;	
+}
+
+.section {
+	float: left;
+	width: 556px;
+	height: 842px;
+}
+
+.promo {
+	background: url("");
+	width: 100%;
+	height: 442px;
+	margin-bottom: 11px;
+	background-size: cover;
+}
+
+.promo-text {
+	color: #252525;
+	font-size: 44px;
+	line-height: 46px;
+	font-weight: bold;
+	padding-left: 56px;
+	padding-top: 126px;
+}
+
+.promo .btn {
+	margin-top: 32px;
+	margin-left: 56px;
+}
+
+.section-item {
+	float: left;
+	width: 180px;
+	height: 315px;
+	background-color: white;
+	margin-left: 90px;
+}
+
+.main-chess img {
+	padding-left: 88px;
+	padding-top: 84px;
+}
+
+.main-chess p {
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 28px;
+}
+
+.main-schulte img {
+	padding-left: 68px;
+	padding-top: 64px;
+}
+
+.main-schulte p {
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 28px;
+}
+
+.main-it {
+	float: left;
+	width: 192px;
+	height: 215px;
+}
+
+.main-it p {     /*Проблема с этим текстом*/
+	margin: 0;
+	width: 154px;
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: bold;
+	color: black;
+	padding-right: 36px;
+	padding-bottom: 52px;
+}
+
+.main-it .btn {
+	margin-right: 136px;
+	margin-bottom: 24px;
+}
+
+.image-rd {
+	float: right;
+	margin-right: 28px;
+	margin-bottom: 51px;
+}
+
+/*********************Конец стилей section**********************/
+
+/*********************Начало стилей sidebar**********************/
+.sidebar {
+	float: right;
+	width: 372px;
+	margin-right: 12px;
+}
+
+.le-nk {
+	background: #ededed;
+	overflow: auto;
+	height: 158px;
+	margin-bottom: 14px;
+}
+
+.le-nk-text {
+	float: left;
+}
+
+.le-nk-text h2 {
+	margin: 0;
+	width: 150px;
+	color: #1e1e1e;
+	font-size: 26px;
+	line-height: 31px;
+	font-weight: bold;
+	padding-top: 60px;
+	padding-left: 22px;
+}
+
+.le-nk-text p {
+	margin: 0;
+	width: 150px;
+	color: #00aeef;
+	font-size: 26px;
+	line-height: 31px;
+	font-weight: bold;
+	padding-left: 22px;
+}
+
+.le-nk img {
+	float: right;
+	padding-top: 22px;
+}
+
+.nk-rd {
+	background: url("");
+	width: 100%;
+	height: 496px;
+}
+
+.nk-rd h2 {
+	margin: 0;
+	color: #1e1e1e;
+	font-size: 26px;
+	padding-top: 42px;
+	padding-right: 22px;
+}
+
+.nk-rd .btn {
+	margin-top: 20px;
+	margin-right: 24px;
+}
+/*********************Конец стилей sidebar**********************/
+
+/*********************Конец стилей content**********************/
+
+/*********************Начало стилей подвала**********************/
+
+.footer {
+	margin-top: 36px;
+	background-color: #f5f5f5;
+	overflow: auto;
+}
+
+.footer-item {
+	float: left;
+	margin-top: 17px;
+}
+
+.footer-item a {
+	font-size: 14px;
+	line-height: 52px;
+	color: #1e1e1e;
+	text-decoration: none;
+}
+
+.footer-item a:hover {
+	text-decoration: underline;
+}
+
+.footer-item p {
+	margin: 0;
+	font-size: 12px;
+	line-height: 16px;
+	color: #a6a6a6;
+}
+
+.copyright {
+	width: 318px;
+}
+
+.footer-feedback {
+	width: 260px;
+	margin-left: 94px;
+}
+
+.info {
+	width: 372px;
+	margin-left: 96px;
+}
+
+.info p {
+	margin-top: 19px;
+}
+/*********************Конец стилей подвала**********************/
+
+.social i{
+font-size:30px;
+color: crimson;
+border-radius: 50%;
+padding: 18px 18px;
+background-color: whitesmoke;
+margin-right: 15px;
+}

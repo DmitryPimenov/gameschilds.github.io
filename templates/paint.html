@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	  <title>Paint</title>
+	  <meta name="author" content="Dmitry Pimenov" />
+        <link rel="shortcut icon" href="https://i.ibb.co/Wp7193J/faon.jpg" type="image/jpg">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel='dns-prefetch' href='//s.w.org'/>
+	  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable = 0">
+     <link rel="stylesheet" href="static/css/paint.css"/>
+    <script defer src="static/js/paint.js"></script>
+  </head>
+	<body>
+		<div id='colors'>
+			<button id='black' onclick='changeColor("black")' ontouchstart='changeColor("black")'></button>
+			<button id='red' onclick='changeColor("red")' ontouchstart='changeColor("red")'></button>
+			<button id='green' onclick='changeColor("green")' ontouchstart='changeColor("green")'></button>
+			<button id='blue' onclick='changeColor("blue")' ontouchstart='changeColor("blue")'></button>
+			<button id='orange' onclick='changeColor("orange")' ontouchstart='changeColor("orange")'></button>
+			<button id='pink' onclick='changeColor("pink")' ontouchstart='changeColor("pink")'></button>
+          <button id='aqua' onclick='changeColor("aqua")' ontouchstart='changeColor("aqua")'></button>
+           <button id='magenta' onclick='changeColor("magenta")' ontouchstart='changeColor("magenta")'></button>
+            <button id='lime' onclick='changeColor("lime")' ontouchstart='changeColor("lime")'></button>
+            <button id='white' onclick='changeColor("white")' ontouchstart='changeColor("white")'></button>
+          <button id='purple' onclick='changeColor("purple")' ontouchstart='changeColor("purple")'></button>
+          <button id='yellow' onclick='changeColor("yellow")' ontouchstart='changeColor("yellow")'></button>
+		</div>
+		<canvas id='canvas' width='1250' height='800'></canvas>
+		<div>
+			<button onclick='clearCanvas()'>Clear</button>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <meta name="author" content="Dmitry Pimenov" />
+        <link rel="shortcut icon" href="https://i.ibb.co/Wp7193J/faon.jpg" type="image/jpg">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel='dns-prefetch' href='//s.w.org'/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	    <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable = 0">
+      <link rel="stylesheet" href="static/css/number.css"/>
+	<title>Number Puzzle</title>
+  </head>
+  <body>
+  <embed src="static/music/163. Paul Mauriat - Minuettto.mp3" loop="true" autostart="true" height="0" width="0">
+	<main>
+
+		<div id="menu" class="mainMenu">
+		  <div class="container">
+			<div class="header">
+			  <h1>
+				Number Puzzle
+				<hr />
+				<hr style="width: 70%; margin-top: 5px" />
+				<hr style="width: 50%; margin-top: 5px" />
+			  </h1>
+			</div>
+			<div class="menu grid-container">
+			  <button onclick="levelOne();" class="grid-item">
+				Start Game
+			  </button>
+			  <button onclick="Level()" class="grid-item">Level</button>
+			  <button onclick="Instruction()" class="grid-item">
+				Instruction
+			  </button>
+			  <button onclick="About()" class="grid-item">About</button>
+			  <button onclick="exitGame()" class="grid-item">Exit</button>
+			</div>
+			<div class="footer">
+			  <h3>
+			 <br />
+			  </h3>
+			</div>
+		  </div>
+		</div>
+		<div id="level">
+		  <div class="container">
+			<div class="head">
+			  <h1>
+				Select Level
+				<hr />
+			  </h1>
+			</div>
+			<div class="level-area">
+			  <div class="grid-container">
+				<button id="b1" onclick="levelOne()" class="lvlbtn">
+				  Level 1
+				</button>
+				<button id="b2" onclick="levelTwo()" class="lvlbtn">
+				  Level 2
+				</button>
+				<button id="b3" onclick="levelThree()" class="lvlbtn">
+				  Level 3
+				</button>
+				<button id="b4" onclick="levelFour()" class="lvlbtn">
+				  Level 4
+				</button>
+				<button id="b5" onclick="levelFive()" class="lvlbtn">
+				  Level 5
+				</button>
+				<button id="b6" onclick="levelSix()" class="lvlbtn">
+				  Level 6
+				</button>
+				<button id="b7" onclick="levelSeven()" class="lvlbtn">
+				  Level 7
+				</button>
+				<button id="b8" onclick="levelEight()" class="lvlbtn">
+				  Level 8
+				</button>
+				<button id="b9" onclick="levelNine()" class="lvlbtn">
+				  Level 9
+				</button>
+				<button id="b10" onclick="levelTen()" class="lvlbtn">
+				  Level 10
+				</button>
+				<button id="b11" onclick="levelEleven()" class="lvlbtn">
+				  Level 11
+				</button>
+				<button id="b12" onclick="levelTwelve()" class="lvlbtn">
+				  Level 12
+				</button>
+				<button id="b13" onclick="levelThirteen()" class="lvlbtn">
+				  Level 13
+				</button>
+				<button id="b14" onclick="levelFourteen()" class="lvlbtn">
+				  Level 14
+				</button>
+				<button id="b15" onclick="levelFifteen()" class="lvlbtn">
+				  Level 15
+				</button>
+			  </div>
+			</div>
+			<div class="grid-container">
+			  <button id="backButton" onclick="backButton()" class="grid-item">
+				Back
+			  </button>
+			</div>
+			<div class="footer">
+			  <h3>
+		 <br />
+			  </h3>
+			</div>
+		  </div>
+		</div>
+		<div id="about">
+		  <div class="container">
+			<div class="head">
+			  <h1>
+				About Game
+				<hr />
+			  </h1>
+			  <div class="about-s">
+				<p>
+				 <h4>Number Puzzle</h4><br />
+				</p>
+			  </div>
+			</div>
+			<div class="grid-container">
+			  <button id="backButton" onclick="backButton()" class="grid-item">
+				Back
+			  </button>
+			</div>
+			<div class="footer">
+			  <h3>
+			<br/>
+			  </h3>
+			</div>
+		  </div>
+		</div>
+		<div id="instruction">
+		  <div class="container">
+			<div class="head">
+			  <h1>
+				Instruction
+				<hr />
+			  </h1>
+			  <div class="gameplay">
+				<p>
+				  Choose a level to start the game or Start game. You will see
+				  random numbers.(See the Picture below)
+				  <img
+					src="https://i.ibb.co/3Cb4s9Z/screencapture-127-0-0-1-5500-2020-09-06-18-38-07.png"
+				  />
+				</p>
+				<p>
+				  Complete the Puzzle before you out of moves to Win(See the
+				  picture below). Double tap will be also count, so be careful when move.
+				  <img
+					src="https://i.ibb.co/kxGLHdn/screencapture-127-0-0-1-5500-2020-09-06-18-39-13.png"
+				  />
+				</p>
+			  </div>
+			</div>
+
+			<div class="grid-container">
+			  <button id="backButton" onclick="backButton()" class="grid-item">
+				Back
+			  </button>
+			</div>
+			<div class="footer">
+			  <h3>
+			 <br />
+			  </h3>
+			</div>
+		  </div>
+		</div>
+		<div id="lvl">
+		  <div class="container">
+			<div class="head">
+			  <h1 id="lvlname">
+				Level One
+				<hr />
+			  </h1>
+			</div>
+			<div class="leveldesign">
+			  <div class="movement">
+				<strong>Moved: <span id="moved"> </span></strong>
+				<b>Moves: <span id="moves"> </span></b>
+			  </div>
+			  <div class="grid-container">
+				<button class="btn" id="btn1"></button>
+				<button class="btn" id="btn2"></button>
+				<button class="btn" id="btn3"></button>
+				<button class="btn" id="btn4"></button>
+				<button class="btn" id="btn5"></button>
+				<button class="btn" id="btn6"></button>
+				<button class="btn" id="btn7"></button>
+				<button class="btn" id="btn8"></button>
+				<button class="btn" id="btn9"></button>
+			  </div>
+			</div>
+			<div class="grid-container">
+			  <button
+				id="resetButton"
+				onclick="resetButton()"
+				class="grid-item"
+			  >
+				Restart
+			  </button>
+			</div>
+			<div class="grid-container">
+			  <button id="backButton" onclick="backButton()" class="grid-item">
+				Back
+			  </button>
+			</div>
+		  </div>
+		</div>
+		<div id="winner" class="winner">
+		  <div class="modal">
+			<div class="top">
+			  <div style="box-shadow: none" class="container">
+				<h1 id="qoute"></h1>
+				<p id="congo">
+				  <strong id="trp">&#127942;</strong>
+
+				  <span id="star1">☆</span>
+				  <span id="star2">☆</span>
+				  <span id="star3">☆</span>
+				  <span id="star4">☆</span>
+				  <span id="star5">☆</span>
+				  <b id="lvlc">Level Completed</b>
+				</p>
+				<p id="over">
+				  <b>Oho!</b>
+				  <span id="sad"> &#128546; </span>
+				</p>
+				<div class="grid-container">
+				  <button
+					onclick="tryAgain()"
+					id="playAgain"
+					class="grid-item"
+				  ></button>
+				  <button onclick="nextLevel()" id="nextLvl" class="grid-item">
+					Next Level
+				  </button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+	  <div id="exit">
+		 <h2 class="exit"><br>
+		 </h2> 
+	  </div>
+	  <audio id="clickClip">
+		<source
+		  src="https:.mp3"
+		  type="audio/mpeg"
+		/>
+	  </audio>
+	  <audio id="clickClip2">
+		<source
+		  src="https://.mp3"
+		  type="audio/mpeg"
+		/>
+	  </audio>
+	  <audio id="gameoverClip">
+		<source
+		  src="https://.mp3"
+		  type="audio/mpeg"
+		/>
+	  </audio>
+	  <audio id="congratsClip">
+		<source
+		  src="https://.mp3"
+		  type="audio/mpeg"
+		/>
+	  </audio>
+	   <audio id="Clip">
+		<source
+		  src=" https://"
+		  type="audio/mpeg"
+		/>
+	  </audio>
+	</main>
+
+	<script>
+		
+function loadPage() {
+   setTimeout(showPage, 3000);
+}
+ loadPage();
+ 
+function showPage() {
+
+}
+
+var about = document.getElementById("about");
+var instruction = document.getElementById("instruction");
+var menu = document.getElementById("menu");
+var level = document.getElementById("level");
+var moves = document.getElementById("moves");
+var moved = document.getElementById("moved");
+var levels = document.getElementById("lvl");
+
+function Instruction() {
+  menu.style.display = "none";
+  level.style.display = "none";
+  instruction.style.display = "block";
+  btnClickAll.play();
+}
+function About() {
+  menu.style.display = "none";
+  level.style.display = "none";
+  about.style.display = "block";
+  btnClickAll.play();
+}
+function Level() {
+  menu.style.display = "none";
+  about.style.display = "none";
+  level.style.display = "block";
+  btnClickAll.play();
+}
+function backButton() {
+  menu.style.display = "block";
+  if (
+	about.style.display == "block" ||
+	instruction.style.display == "block" ||
+	level.style.display == "block" || levels.style.display == "block"
+  ) {
+	menu.style.display = "block";
+	level.style.display = "none";
+	about.style.display = "none";
+	instruction.style.display = "none";
+	levels.style.display = "none";
+  }
+  btnClickAll.play();
+}
+var btnClicked = document.getElementById("clickClip");
+var btnClickAll = document.getElementById("clickClip2");
+var gameoverClip = document.getElementById("gameoverClip");
+var congratsClip = document.getElementById("congratsClip");
+
+var b1 = document.getElementById("b1");
+var b2 = document.getElementById("b2");
+var b3 = document.getElementById("b3");
+var b4 = document.getElementById("b4");
+var b5 = document.getElementById("b5");
+var b6 = document.getElementById("b6");
+var b7 = document.getElementById("b7");
+var b8 = document.getElementById("b8");
+var b9 = document.getElementById("b9");
+var b10 = document.getElementById("b10");
+var b11 = document.getElementById("b11");
+var b12 = document.getElementById("b12");
+var b13 = document.getElementById("b13");
+var b14 = document.getElementById("b14");
+var b15 = document.getElementById("b15");
+
+var btn1 = document.getElementById("btn1");
+var btn2 = document.getElementById("btn2");
+var btn3 = document.getElementById("btn3");
+var btn4 = document.getElementById("btn4");
+var btn5 = document.getElementById("btn5");
+var btn6 = document.getElementById("btn6");
+var btn7 = document.getElementById("btn7");
+var btn8 = document.getElementById("btn8");
+var btn9 = document.getElementById("btn9");
+
+var tryagain = document.getElementById("playAgain");
+var next = document.getElementById("nextLvl");
+var levelName = document.getElementById("lvlname");
+var winner = document.getElementById("winner");
+var qoute = document.getElementById("qoute");
+var over = document.getElementById("over");
+var congo = document.getElementById("congo");
+var lvlc = document.getElementById("lvlc");
+
+var star1 = document.getElementById("star1");
+var star2 = document.getElementById("star2");
+var star3 = document.getElementById("star3");
+var star4 = document.getElementById("star4");
+var star5 = document.getElementById("star5");
+
+function buttonValues(
+  value1,
+  value2,
+  value3,
+  value4,
+  value5,
+  value6,
+  value7,
+  value8,
+  value9
+) {
+  this.value1 = value1;
+  this.value2 = value2;
+  this.value3 = value3;
+  this.value4 = value4;
+  this.value5 = value5;
+  this.value6 = value6;
+  this.value7 = value7;
+  this.value8 = value8;
+  this.value9 = value9;
+
+  btn1.value = value1;
+  btn1.innerText = value1;
+
+  btn2.value = value2;
+  btn2.innerText = value2;
+
+  btn3.value = value3;
+  btn3.innerText = value3;
+
+  btn4.value = value4;
+  btn4.innerText = value4;
+
+  btn5.value = value5;
+  btn5.innerText = value5;
+
+  btn6.value = value6;
+  btn6.innerText = value6;
+
+  btn7.value = value7;
+  btn7.innerText = value7;
+
+  btn8.value = value8;
+  btn8.innerText = value8;
+
+  btn9.value = value9;
+  btn9.innerText = value9;
+}
+
+btn1.addEventListener("click", function () {
+
+  var val = btn1.value;
+
+  if (btn2.value == "") {
+	btn2.innerText = val;
+	btn1.innerText = "";
+	btn2.value = val;
+	btn1.value = "";
+
+  }
+  else if (btn4.value == "") {
+	btn4.innerText = val;
+	btn1.innerText = "";
+	btn4.value = val;
+	btn1.value = "";
+  }
+
+  winnerCode();
+
+  moved.value--;
+
+  moved.innerText++;
+
+  gameOver();
+
+  btnClicked.play();
+
+});
+
+btn2.addEventListener("click", function () {
+
+  var val = btn2.value;
+
+  if (btn1.value == "") {
+	btn1.innerText = val;
+	btn2.innerText = "";
+	btn1.value = val;
+	btn2.value = "";
+  }
+  else if (btn3.value == "") {
+	btn3.innerText = val;
+	btn2.innerText = "";
+	btn3.value = val;
+	btn2.value = "";
+  }
+  else if (btn5.value == "") {
+	btn5.innerText = val;
+	btn2.innerText = "";
+	btn5.value = val;
+	btn2.value = "";
+  }
+  winnerCode();
+  moved.value--;
+  moved.innerText++;
+  gameOver();
+  btnClicked.play();
+});
+btn3.addEventListener("click", function () {
+
+  var val = btn3.value;
+
+  if (btn2.value == "") {
+	btn2.innerText = val;
+	btn3.innerText = "";
+	btn2.value = val;
+	btn3.value = "";
+  }
+  else if (btn6.value == "") {
+	btn6.innerText = val;
+	btn3.innerText = "";
+	btn6.value = val;
+	btn3.value = "";
+  }
+  winnerCode();
+  moved.value--;
+  moved.innerText++;
+  gameOver();
+  btnClicked.play();
+});
+
+btn4.addEventListener("click", function () {
+
+  var val = btn4.value;
+
+  if (btn1.value == "") {
+	btn1.innerText = val;
+	btn4.innerText = "";
+	btn1.value = val;
+	btn4.value = "";
+  } 
+
+  else if (btn5.value == "") {
+	btn5.innerText = val;
+	btn4.innerText = "";
+	btn5.value = val;
+	btn4.value = "";
+  } 
+
+  else if (btn7.value == "") {
+	btn7.innerText = val;
+	btn4.innerText = "";
+	btn7.value = val;
+	btn4.value = "";
+  }
+  winnerCode();
+  moved.value--;
+  moved.innerText++;
+  gameOver();
+  btnClicked.play();
+});
+
+btn5.addEventListener("click", function () {
+
+
+
+  var val = btn5.value;
+
+
+  if (btn2.value == "") {
+	btn2.innerText = val;
+	btn5.innerText = "";
+	btn2.value = val;
+	btn5.value = "";
+  } 
+
+  else if (btn4.value == "") {
+	btn4.innerText = val;
+	btn5.innerText = "";
+	btn4.value = val;
+	btn5.value = "";
+  } 
+
+  else if (btn6.value == "") {
+	btn6.innerText = val;
+	btn5.innerText = "";
+	btn6.value = val;
+	btn5.value = "";
+  } 
+
+  else if (btn8.value == "") {
+	btn8.innerText = val;
+	btn5.innerText = "";
+	btn8.value = val;
+	btn5.value = "";
+  }
+  winnerCode();
+  moved.value--;
+  moved.innerText++;
+  gameOver();
+  btnClicked.play();
+});
+
+btn6.addEventListener("click", function () {
+
+
+
+
+  var val = btn6.value;
+
+
+  if (btn3.value == "") {
+	btn3.innerText = val;
+	btn6.innerText = "";
+	btn3.value = val;
+	btn6.value = "";
+  } 
+
+  else if (btn5.value == "") {
+	btn5.innerText = val;
+	btn6.innerText = "";
+	btn5.value = val;
+	btn6.value = "";
+  } 
+
+  else if (btn9.value == "") {
+	btn9.innerText = val;
+	btn6.innerText = "";
+	btn9.value = val;
+	btn6.value = "";
+  }
+  winnerCode();
+  moved.value--;
+  moved.innerText++;
+  gameOver();
+  btnClicked.play();
+});
+
+btn7.addEventListener("click", function () {
+
+
+
+
+  var val = btn7.value;
+
+
+  if (btn4.value == "") {
+	btn4.innerText = val;
+	btn7.innerText = "";
+	btn4.value = val;
+	btn7.value = "";
+  } 
+
+  else if (btn8.value == "") {
+	btn8.innerText = val;
+	btn7.innerText = "";
+	btn8.value = val;
+	btn7.value = "";
+  }
+  winnerCode();
+  moved.value--;
+  moved.innerText++;
+  gameOver();
+  btnClicked.play();
+});
+
+btn8.addEventListener("click", function () {
+
+
+
+
+  var val = btn8.value;
+
+
+  if (btn5.value == "") {
+	btn5.innerText = val;
+	btn8.innerText = "";
+	btn5.value = val;
+	btn8.value = "";
+  } 
+
+  else if (btn7.value == "") {
+	btn7.innerText = val;
+	btn8.innerText = "";
+	btn7.value = val;
+	btn8.value = "";
+  } 
+
+  else if (btn9.value == "") {
+	btn9.innerText = val;
+	btn8.innerText = "";
+	btn9.value = val;
+	btn8.value = "";
+  }
+  winnerCode();
+  moved.value--;
+  moved.innerText++;
+  gameOver();
+  btnClicked.play();
+});
+
+btn9.addEventListener("click", function () {
+
+
+
+
+  var val = btn9.value;
+  if (btn6.value == "") {
+	btn6.innerText = val;
+	btn9.innerText = "";
+	btn6.value = val;
+	btn9.value = "";
+  } 
+
+  else if (btn8.value == "") {
+	btn8.innerText = val;
+	btn9.innerText = "";
+	btn8.value = val;
+	btn9.value = "";
+  }
+  winnerCode();
+  moved.value--;
+  moved.innerText++;
+  gameOver();
+  btnClicked.play();
+});
+
+
+function tryAgain() {
+  winner.style.display = "none";
+
+  resetButton();
+}
+
+
+function nextLevel() {
+  winner.style.display = "none";
+
+
+
+  if (b1.value == "1") {
+	levelTwo();
+  } else if (b2.value == "1") {
+	levelThree();
+  } else if (b3.value == "1") {
+	levelFour();
+  } else if (b4.value == "1") {
+	levelFive();
+  } else if (b5.value == "1") {
+	levelSix();
+  } else if (b6.value == "1") {
+	levelSeven();
+  } else if (b7.value == "1") {
+	levelEight();
+  } else if (b8.value == "1") {
+	levelNine();
+  } else if (b9.value == "1") {
+	levelTen();
+  } else if (b10.value == "1") {
+	levelEleven();
+  } else if (b11.value == "1") {
+	levelTwelve();
+  } else if (b12.value == "1") {
+	levelThirteen();
+  } else if (b13.value == "1") {
+	levelFourteen();
+  } else if (b14.value == "1") {
+	levelFifteen();
+  } else if (b15.value == "1") {
+	levelOne();
+  }
+}
+
+
+function winning(val1, val2, val3, val4, val5, val6, val7, val8, val9, val10, val11, val12) {
+  this.val1 = val1;
+  this.val2 = val2;
+  this.val3 = val3;
+  this.val4 = val4;
+  this.val5 = val5;
+  this.val6 = val6;
+  this.val7 = val7;
+  this.val8 = val8;
+  this.val9 = val9;
+  this.val10 = val10;
+  this.val11 = val11;
+  this.val12 = val12;
+  next.style.display = val1;
+  next.style.innerText = val2;
+  tryagain.innerText = val3;
+  qoute.innerHTML = val4;
+  over.style.display = val5;
+  congo.style.display = val6;
+  winner.style.display = val7;
+  star1.className = val8;
+  star2.className = val9;
+  star3.className = val10;
+  star4.className = val11;
+  star5.className = val12;
+
+
+}
+
+
+function winnerCode() {
+
+
+  if (
+	btn1.value == 1 &&
+	btn2.value == 2 &&
+	btn3.value == 3 &&
+	btn4.value == 4 &&
+	btn5.value == 5 &&
+	btn6.value == 6 &&
+	btn7.value == 7 &&
+	btn8.value == 8 &&
+	btn9.value == ""
+  ) {
+
+	if (moved.innerText < "20") {
+	  new winning("block", "Next Level", "Play Again", "Congratulations!<hr>", "none", "block", "block", "fill", "fill", "fill", "fill", "fill");
+	  congratsClip.play();
+	} else if (moved.innerText < "30") {
+	  new winning("block", "Next Level", "Play Again", "Congratulations!<hr>", "none", "block", "block", "fill", "fill", "fill", "fill", "none");
+	  congratsClip.play();
+	} else if (moved.innerText < "40") {
+	  new winning("block", "Next Level", "Play Again", "Congratulations!<hr>", "none", "block", "block", "fill", "fill", "fill", "none", "none");
+	  congratsClip.play();
+	} else if (moved.innerText < "50") {
+	  new winning("block", "Next Level", "Play Again", "Congratulations!<hr>", "none", "block", "block", "fill", "fill", "none", "none", "none");
+	  congratsClip.play();
+	} else if (moved.innerText < "60") {
+	  new winning("block", "Next Level", "Play Again", "Congratulations!<hr>", "none", "block", "block", "fill", "none", "none", "none", "none");
+	  congratsClip.play();
+	}
+  }
+
+}
+
+
+function overG(v1, v2, v3, v4, v5, v6) {
+  this.v1 = v1;
+  this.v2 = v2;
+  this.v3 = v2;
+  this.v4 = v4;
+  this.v5 = v5;
+  this.v6 = v6;
+
+  next.style.display = v1;
+  tryagain.innerText = v2;
+  qoute.innerHTML = v3;
+  over.style.display = v4;
+  congo.style.display = v5;
+  winner.style.display = v6;
+
+}
+
+
+function gameOver() {
+
+  if (moved.value == 0) {
+	new overG("none", "Try Again", "Game Over<hr>", "block", "none", "block");
+	gameoverClip.play();
+	congratsClip.pause();
+  }
+}
+
+function resetButton() {
+
+  if (b1.value == "1") {
+	levelOne();
+  } else if (b2.value == "1") {
+	levelTwo();
+  } else if (b3.value == "1") {
+	levelThree();
+  } else if (b4.value == "1") {
+	levelFour();
+  } else if (b5.value == "1") {
+	levelFive();
+  } else if (b6.value == "1") {
+	levelSix();
+  } else if (b7.value == "1") {
+	levelSeven();
+  } else if (b8.value == "1") {
+	levelEight();
+  } else if (b9.value == "1") {
+	levelNine();
+  } else if (b10.value == "1") {
+	levelTen();
+  } else if (b11.value == "1") {
+	levelEleven();
+  } else if (b12.value == "1") {
+	levelTwelve();
+  } else if (b13.value == "1") {
+	levelThirteen();
+  } else if (b14.value == "1") {
+	levelFourteen();
+  } else if (b15.value == "1") {
+	levelFifteen();
+  }
+}
+
+
+function levelOne() {
+  levelName.innerHTML = "Level One" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("1", "2", "3", "4", "", "5", "6", "7", "8");
+  moves.innerText = 20;
+  moves.value = 20;
+  moved.innerText = 0;
+  moved.value = 20;
+  btnClickAll.play();
+  b1.value = "1";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+}
+function levelTwo() {
+  levelName.innerHTML = "Level Two" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("1", "2", "3", "4", "8", "6", "5", "7", "");
+  moves.innerText = 20;
+  moves.value = 20;
+  moved.innerText = 0;
+  moved.value = 20;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "1";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+}
+function levelThree() {
+  levelName.innerHTML = "Level Three" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("1", "2", "3", "4", "5", "", "6", "7", "8");
+  moves.innerText = 30;
+  moves.value = 30;
+  moved.innerText = 0;
+  moved.value = 30;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "1";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+  b13.value = "";
+  b14.value = "";
+  b15.value = "";
+}
+function levelFour() {
+  levelName.innerHTML = "Level Four" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+
+  new buttonValues("", "2", "1", "3", "4", "5", "6", "7", "8");
+  moves.innerText = 40;
+  moves.value = 40;
+  moved.innerText = 0;
+  moved.value = 40;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "1";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+  b13.value = "";
+  b14.value = "";
+  b15.value = "";
+}
+function levelFive() {
+  levelName.innerHTML = "Level Five" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("1", "2", "", "4", "5", "6", "7", "8", "3");
+  moves.innerText = 40;
+  moves.value = 40;
+  moved.innerText = 0;
+  moved.value = 40;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "1";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+  b13.value = "";
+  b14.value = "";
+  b15.value = "";
+}
+function levelSix() {
+  levelName.innerHTML = "Level Six" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("4", "1", "7", "3", "5", "6", "2", "8", "");
+  moves.innerText = 50;
+  moves.value = 50;
+  moved.innerText = 0;
+  moved.value = 50;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "1";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+  b13.value = "";
+  b14.value = "";
+  b15.value = "";
+}
+function levelSeven() {
+  levelName.innerHTML = "Level Seven" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("3", "2", "5", "6", "8", "4", "7", "1", "");
+  moves.innerText = 50;
+  moves.value = 50;
+  moved.innerText = 0;
+  moved.value = 50;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "1";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+  b13.value = "";
+  b14.value = "";
+  b15.value = "";
+}
+function levelEight() {
+  levelName.innerHTML = "Level Eight" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("8", "4", "3", "2", "7", "1", "5", "6", "");
+  moves.innerText = 60;
+  moves.value = 60;
+  moved.innerText = 0;
+  moved.value = 60;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "1";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+  b13.value = "";
+  b14.value = "";
+  b15.value = "";
+}
+function levelNine() {
+  levelName.innerHTML = "Level Nine" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("6", "1", "3", "8", "7", "4", "2", "5", "");
+  moves.innerText = 60;
+  moves.value = 60;
+  moved.innerText = 0;
+  moved.value = 60;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "1";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+  b13.value = "";
+  b14.value = "";
+  b15.value = "";
+}
+function levelTen() {
+  levelName.innerHTML = "Level Ten" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("6", "4", "5", "2", "7", "1", "3", "8", "");
+  moves.innerText = 60;
+  moves.value = 60;
+  moved.innerText = 0;
+  moved.value = 60;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "1";
+  b11.value = "";
+  b12.value = "";
+  b13.value = "";
+  b14.value = "";
+  b15.value = "";
+}
+function levelEleven() {
+  levelName.innerHTML = "Level Eleven" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("1", "3", "6", "5", "2", "4", "7", "8", "");
+  moves.innerText = 60;
+  moves.value = 60;
+  moved.innerText = 0;
+  moved.value = 60;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "1";
+  b12.value = "";
+  b13.value = "";
+  b14.value = "";
+  b15.value = "";
+}
+function levelTwelve() {
+  levelName.innerHTML = "Level Twelve" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("6", "3", "5", "8", "1", "7", "2", "4", "");
+  moves.innerText = 60;
+  moves.value = 60;
+  moved.innerText = 0;
+  moved.value = 60;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "1";
+  b13.value = "";
+  b14.value = "";
+  b15.value = "";
+}
+function levelThirteen() {
+  levelName.innerHTML = "Level Thirteen" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("8", "1", "4", "3", "2", "7", "5", "6", "");
+  moves.innerText = 60;
+  moves.value = 60;
+  moved.innerText = 0;
+  moved.value = 60;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+  b13.value = "1";
+  b14.value = "";
+  b15.value = "";
+}
+function levelFourteen() {
+  levelName.innerHTML = "Level Fourteen" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("6", "8", "1", "2", "3", "7", "5", "4", "");
+  moves.innerText = 60;
+  moves.value = 60;
+  moved.innerText = 0;
+  moved.value = 60;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+  b13.value = "";
+  b14.value = "1";
+  b15.value = "";
+}
+function levelFifteen() {
+  levelName.innerHTML = "Level Fifteen" + "<hr>";
+  levels.style.display = "block";
+  level.style.display = "none";
+  menu.style.display = "none";
+  new buttonValues("4", "7", "2", "6", "5", "3", "8", "1", "");
+  moves.innerText = 60;
+  moves.value = 60;
+  moved.innerText = 0;
+  moved.value = 60;
+  btnClickAll.play();
+  b1.value = "";
+  b2.value = "";
+  b3.value = "";
+  b4.value = "";
+  b5.value = "";
+  b6.value = "";
+  b7.value = "";
+  b8.value = "";
+  b9.value = "";
+  b10.value = "";
+  b11.value = "";
+  b12.value = "";
+  b13.value = "";
+  b14.value = "";
+  b15.value = "1";
+}
+  var playClip = document.getElementById("Clip");
+function soundTrue(){
+
+  playClip.play();
+  playClip.volume = 0.2;
+	document.getElementById("sound").style.display = "none";
+	document.getElementById("main").style.display = "block";
+	
+}
+function soundFalse(){
+  playClip.pause();
+	document.getElementById("sound").style.display = "none";
+	document.getElementById("main").style.display = "block";
+}
+
+function exitGame(){
+
+	document.getElementById("exit").style.display = "block";
+	playClip.pause();
+}
+	</script>
+  </body>
+</html>
