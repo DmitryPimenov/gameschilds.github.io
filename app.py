@@ -24,7 +24,7 @@ class Signup(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), index=True, unique=True)
     lastname = db.Column(db.String(100), index=True, unique=True)
-    email = db.Column(db.String(120), index=True, unique=True)
+    #email = db.Column(db.String(120), index=True, unique=True)
     #password = db.Column(db.String(128))
     #age = db.Column(db.String(128))
     #sex = db.Column(db.String(128))
@@ -141,12 +141,12 @@ def signup():
     if request.method == "POST":
         name = request.form['name']
         lastname = request.form['lastname']
-        email = request.form['email']
+        #email = request.form['email']
         #password = request.form['password']
         #age = request.form['age']
         #sex = request.form['sex']
 
-        signup = Signup(name=name, lastname=lastname, email=email)
+        signup = Signup(name=name, lastname=lastname)
 
         try:
             db.session.add(signup)
