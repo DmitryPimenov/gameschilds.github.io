@@ -13,8 +13,8 @@ migrate = Migrate(app, db)
 
 class Login(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), index=True, unique=True)
-    password = db.Column(db.String(128))
+    name = db.Column(db.String(100)) #index=True, unique=True)
+    #password = db.Column(db.String(128))
 
     def __repr__(self):
         return '<Login %r>' % self.id
@@ -22,14 +22,14 @@ class Login(db.Model):
 
 class Signup(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), index=True, unique=True)
-    lastname = db.Column(db.String(100), index=True, unique=True)
-    email = db.Column(db.String(120), index=True, unique=True)
-    password = db.Column(db.String(128))
+    name = db.Column(db.String(100)) #index=True, unique=True)
+    lastname = db.Column(db.String(100)) #index=True, unique=True)
+    email = db.Column(db.String(120)) #index=True, unique=True)
+    #password = db.Column(db.String(128))
     age = db.Column(db.String(128))
     sex = db.Column(db.String(128))
-    say = db.relationship('Says', backref='author', lazy='dynamic')
-    score = db.relationship('Scores', backref='author', lazy='dynamic')
+    #say = db.relationship('Says', backref='author', lazy='dynamic')
+    #score = db.relationship('Scores', backref='author', lazy='dynamic')
 
     def __repr__(self):
         return '<Signup %r>' % self.id
@@ -122,9 +122,9 @@ def number():
 def login():
     if request.method == "POST":
         name = request.form['name']
-        password = request.form['password']
+        #password = request.form['password']
 
-        login = Login(name=name, password=password)
+        login = Login(name=name)
 
         try:
             db.session.add(login)
@@ -142,11 +142,11 @@ def signup():
         name = request.form['name']
         lastname = request.form['lastname']
         email = request.form['email']
-        password = request.form['password']
+        #password = request.form['password']
         age = request.form['age']
         sex = request.form['sex']
 
-        signup = Signup(name=name, lastname=lastname, email=email, password=password, age=age, sex=sex)
+        signup = Signup(name=name, lastname=lastname, email=email, age=age, sex=sex)
 
         try:
             db.session.add(signup)
