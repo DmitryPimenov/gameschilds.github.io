@@ -13,7 +13,7 @@ migrate = Migrate(app, db)
 
 class Login(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100)) #index=True, unique=True)
+    name = db.Column(db.String(100), nullable=False) #index=True, unique=True)
     #password = db.Column(db.String(128))
 
     def __repr__(self):
@@ -22,12 +22,12 @@ class Login(db.Model):
 
 class Signup(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100)) #index=True, unique=True)
-    lastname = db.Column(db.String(100)) #index=True, unique=True)
-    email = db.Column(db.String(120)) #index=True, unique=True)
+    name = db.Column(db.String(100), nullable=False) #index=True, unique=True)
+    lastname = db.Column(db.String(100), nullable=False) #index=True, unique=True)
+    email = db.Column(db.String(120), nullable=False) #index=True, unique=True)
     #password = db.Column(db.String(128))
     #age = db.Column(db.String(128))
-    sex = db.Column(db.String(128))
+    sex = db.Column(db.String(128), nullable=False)
     #say = db.relationship('Says', backref='author', lazy='dynamic')
     #score = db.relationship('Scores', backref='author', lazy='dynamic')
 
