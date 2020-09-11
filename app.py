@@ -15,6 +15,7 @@ class Login(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False) #index=True, unique=True)
     #password = db.Column(db.String(128))
+    date = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
         return '<Login %r>' % self.id
@@ -30,6 +31,7 @@ class Signup(db.Model):
     #sex = db.Column(db.String(128), nullable=False)
     #say = db.relationship('Says', backref='author', lazy='dynamic')
     #score = db.relationship('Scores', backref='author', lazy='dynamic')
+    date = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
         return '<Signup %r>' % self.id
