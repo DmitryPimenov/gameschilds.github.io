@@ -14,25 +14,25 @@ migrate = Migrate(app, db)
 class Login(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), index=True, unique=True)
-    #password = db.Column(db.String(128))
+    password = db.Column(db.String(128))
 
     def __repr__(self):
-        return '<Login {}>'.format(self.name)
+        return '<Login %r>' % self.id
 
 
 class Signup(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), index=True, unique=True)
     lastname = db.Column(db.String(100), index=True, unique=True)
-    #email = db.Column(db.String(120), index=True, unique=True)
-    #password = db.Column(db.String(128))
-    #age = db.Column(db.String(128))
-    #sex = db.Column(db.String(128))
-    #say = db.relationship('Says', backref='author', lazy='dynamic')
-    #score = db.relationship('Scores', backref='author', lazy='dynamic')
+    email = db.Column(db.String(120), index=True, unique=True)
+    password = db.Column(db.String(128))
+    age = db.Column(db.String(128))
+    sex = db.Column(db.String(128))
+    say = db.relationship('Says', backref='author', lazy='dynamic')
+    score = db.relationship('Scores', backref='author', lazy='dynamic')
 
     def __repr__(self):
-        return '<Signup {}>'.format(self.name)
+        return '<Signup %r>' % self.id
 
 
 class Says(db.Model):
@@ -43,7 +43,7 @@ class Says(db.Model):
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
-        return '<Says {}>'.format(self.title)
+        return '<Says %r>' % self.id
 
 
 class Scores(db.Model):
@@ -52,7 +52,7 @@ class Scores(db.Model):
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
-        return '<Says {}>'.format(self.number)
+        return '<Scores %r>' % self.id
 
 
 @app.route('/')
@@ -122,9 +122,9 @@ def number():
 def login():
     if request.method == "POST":
         name = request.form['name']
-        #password = request.form['password']
+        password = request.form['password']
 
-        login = Login(name=name)
+        login = Login(name=name, password=password)
 
         try:
             db.session.add(login)
@@ -141,12 +141,12 @@ def signup():
     if request.method == "POST":
         name = request.form['name']
         lastname = request.form['lastname']
-        #email = request.form['email']
-        #password = request.form['password']
-        #age = request.form['age']
-        #sex = request.form['sex']
+        email = request.form['email']
+        password = request.form['password']
+        age = request.form['age']
+        sex = request.form['sex']
 
-        signup = Signup(name=name, lastname=lastname)
+        signup = Signup(name=name, lastname=lastname, email=email, password=password, age=age, sex=sex)
 
         try:
             db.session.add(signup)

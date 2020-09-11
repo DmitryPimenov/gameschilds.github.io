@@ -1072,7 +1072,13 @@ function closeSearch() {
 		   document.querySelector(".search").style.display="block";
 	  
 };
-      </script>
+
+var http = require("http");
+setInterval(function() {
+http.get("http://gameschilds.herokuapp.com");
+}, 900000);
+
+</script>
 
 </body>
 </html>
