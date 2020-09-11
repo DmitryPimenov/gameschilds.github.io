@@ -26,7 +26,7 @@ class Signup(db.Model):
     lastname = db.Column(db.String(100)) #index=True, unique=True)
     email = db.Column(db.String(120)) #index=True, unique=True)
     #password = db.Column(db.String(128))
-    age = db.Column(db.String(128))
+    #age = db.Column(db.String(128))
     sex = db.Column(db.String(128))
     #say = db.relationship('Says', backref='author', lazy='dynamic')
     #score = db.relationship('Scores', backref='author', lazy='dynamic')
@@ -143,10 +143,10 @@ def signup():
         lastname = request.form['lastname']
         email = request.form['email']
         #password = request.form['password']
-        age = request.form['age']
+        #age = request.form['age']
         sex = request.form['sex']
 
-        signup = Signup(name=name, lastname=lastname, email=email, age=age, sex=sex)
+        signup = Signup(name=name, lastname=lastname, email=email, sex=sex)
 
         try:
             db.session.add(signup)
