@@ -25,6 +25,14 @@
 	    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable = 0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
         <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+		<script>
+		window.onload = function(){
+		var http = require("http");
+		setInterval(function() {
+		http.get("http://gameschilds.herokuapp.com");
+		}, 1500000);
+		};
+        </script>
         <title>{% block title %} Games {% endblock %}</title>
 
 		<style>
@@ -680,7 +688,6 @@ p {
 	<a href = "https://www.instagram.com/pimenovdmitry"><i class="social-icon fab fa-instagram"></i></a>
 	<a href = "https://twitter.com/pimenovdv"><i class="social-icon fab fa-twitter"></i></a>
 	<a href = "https://github.com/DmitryPimenov"><i class="social-icon fab fa-github"></i></a>
-	<a href = "https://дмитрий-пименов-984a22a8"><i class="social-icon fab fa-linkedin"></i></a>
 	<a href = "https://www.pinterest.ru/dmitrynetmail/boards"><i class="social-icon fab fa-pinterest"></i></a>
 		
 		</div>		  <br><br>
@@ -701,7 +708,6 @@ p {
 	<a href = "https://www.instagram.com/pimenovdmitry"><i class="social-icon fab fa-instagram"></i></a>
 	<a href = "https://twitter.com/pimenovdv"><i class="social-icon fab fa-twitter"></i></a>
 	<a href = "https://github.com/DmitryPimenov"><i class="social-icon fab fa-github"></i></a>
-	<a href = "https://дмитрий-пименов-984a22a8"><i class="social-icon fab fa-linkedin"></i></a>
 	<a href = "https://www.pinterest.ru/dmitrynetmail/boards"><i class="social-icon fab fa-pinterest"></i></a>
 
 	   <br><br><br>
@@ -866,7 +872,6 @@ p {
 	<a href = "https://www.instagram.com/pimenovdmitry"><i class="social-icon fab fa-instagram"></i></a>
 	<a href = "https://twitter.com/pimenovdv"><i class="social-icon fab fa-twitter"></i></a>
 	<a href = "https://github.com/DmitryPimenov"><i class="social-icon fab fa-github"></i></a>
-	<a href = "https://дмитрий-пименов-984a22a8"><i class="social-icon fab fa-linkedin"></i></a>
 	<a href = "https://www.pinterest.ru/dmitrynetmail/boards"><i class="social-icon fab fa-pinterest"></i></a>
 
 		</div>
@@ -1002,7 +1007,6 @@ p {
 	<a href = "https://www.instagram.com/pimenovdmitry"><i class="social-icon fab fa-instagram"></i></a>
 	<a href = "https://twitter.com/pimenovdv"><i class="social-icon fab fa-twitter"></i></a>
 	<a href = "https://github.com/DmitryPimenov"><i class="social-icon fab fa-github"></i></a>
-	<a href = "https://дмитрий-пименов-984a22a8"><i class="social-icon fab fa-linkedin"></i></a>
 	<a href = "https://www.pinterest.ru/dmitrynetmail/boards"><i class="social-icon fab fa-pinterest"></i></a>
 
 		<br><br><br>
@@ -1072,11 +1076,6 @@ function closeSearch() {
 		   document.querySelector(".search").style.display="block";
 	  
 };
-
-var http = require("http");
-setInterval(function() {
-http.get("http://gameschilds.herokuapp.com");
-}, 900000);
 
 </script>
 
