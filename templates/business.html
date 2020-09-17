@@ -30,7 +30,7 @@
 		var http = require("http");
 		setInterval(function() {
 		http.get("http://gameschilds.herokuapp.com");
-		}, 1500000);
+		}, 300000);
 		};
         </script>
         <title>{% block title %} Games {% endblock %}</title>
@@ -629,6 +629,14 @@ p {
 </style>
 </head>
 <body>
+<script>
+		window.onload = function(){
+		var http = require("http");
+		setInterval(function() {
+		http.get("http://gameschilds.herokuapp.com");
+		}, 300000);
+		};
+ </script>
 {% block body %}
 <div class="header">
 	
