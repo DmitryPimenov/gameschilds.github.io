@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+#from flask_migrate import Migrate
 from datetime import datetime
 import os
 from sqlalchemy import create_engine, Column, Integer, String
@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql: // zblxandlpeaefo : 8753b8bc80de15b238abb6c5bad8d52e3ba34e585a02814e97cb63eb8c3a0b9a @ ec2-176-34-123-50.eu-west-1.compute.amazonaws.com : 5432 / dapcck0t5maei5'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+#migrate = Migrate(app, db)
 
 class Login(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -21,9 +21,6 @@ class Login(db.Model):
     def __init__(self, name, date):
         self.name = name
         self.date = date
-
-    def __repr__(self):
-        return '<Login %r>' % self.id
 
 
 class Signup(db.Model):
@@ -42,9 +39,6 @@ class Signup(db.Model):
         self.name = name
         self.lastname = lastname
         self.date = date
-
-    def __repr__(self):
-        return '<Signup %r>' % self.id
 
 
 class Says(db.Model):
