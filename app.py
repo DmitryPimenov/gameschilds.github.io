@@ -7,7 +7,7 @@ import os
 from sqlalchemy import create_engine, Column, Integer, String
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres: // zblxandlpeaefo : 8753b8bc80de15b238abb6c5bad8d52e3ba34e585a02814e97cb63eb8c3a0b9a @ ec2-176-34-123-50.eu-west-1.compute.amazonaws.com : 5432 / dapcck0t5maei5'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'Postgres: // zblxandlpeaefo : 8753b8bc80de15b238abb6c5bad8d52e3ba34e585a02814e97cb63eb8c3a0b9a @ ec2-176-34-123-50.eu-west-1.compute.amazonaws.com : 5432 / dapcck0t5maei5'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 #migrate = Migrate(app, db)
@@ -18,9 +18,8 @@ class Login(db.Model):
     #password = db.Column(db.String(128))
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
-    def __init__(self, name, date):
+    def __init__(self, name):
         self.name = name
-        self.date = date
 
 
 class Signup(db.Model):
@@ -35,10 +34,9 @@ class Signup(db.Model):
     #score = db.relationship('Scores', backref='author', lazy='dynamic')
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
-    def __init__(self, name, lastname, date):
+    def __init__(self, name, lastname):
         self.name = name
         self.lastname = lastname
-        self.date = date
 
 
 class Says(db.Model):
