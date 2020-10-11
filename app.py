@@ -3,19 +3,24 @@ from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from datetime import datetime
+import os
+from sqlalchemy import create_engine, Column, Integer, String
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'Postgres: /// zblxandlpeaefo : 8753b8bc80de15b238abb6c5bad8d52e3ba34e585a02814e97cb63eb8c3a0b9a @ ec2-176-34-123-50.eu-west-1.compute.amazonaws.com : 5432 / dapcck0t5maei5.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql: // zblxandlpeaefo : 8753b8bc80de15b238abb6c5bad8d52e3ba34e585a02814e97cb63eb8c3a0b9a @ ec2-176-34-123-50.eu-west-1.compute.amazonaws.com : 5432 / dapcck0t5maei5'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-
 class Login(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False) #index=True, unique=True)
+    name = db.Column(db.String(120), unique=False)
     #password = db.Column(db.String(128))
     date = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __init__(self, name, date):
+        self.name = name
+        self.date = date
 
     def __repr__(self):
         return '<Login %r>' % self.id
@@ -23,8 +28,8 @@ class Login(db.Model):
 
 class Signup(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False) #index=True, unique=True)
-    lastname = db.Column(db.String(100), nullable=False) #index=True, unique=True)
+    name = db.Column(db.String(100), unique=False)
+    lastname = db.Column(db.String(100), unique=False)
     #email = db.Column(db.String(120), nullable=False) #index=True, unique=True)
     #password = db.Column(db.String(128))
     #age = db.Column(db.String(128))
@@ -32,6 +37,11 @@ class Signup(db.Model):
     #say = db.relationship('Says', backref='author', lazy='dynamic')
     #score = db.relationship('Scores', backref='author', lazy='dynamic')
     date = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __init__(self, name, lastname, date):
+        self.name = name
+        self.lastname = lastname
+        self.date = date
 
     def __repr__(self):
         return '<Signup %r>' % self.id
@@ -55,6 +65,10 @@ class Scores(db.Model):
 
     def __repr__(self):
         return '<Scores %r>' % self.id
+
+
+if __name__ == '__main__':
+    db.create_all()
 
 
 @app.route('/')
