@@ -14,18 +14,19 @@ db = SQLAlchemy(app)
 
 class Login(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(120), unique=False)
+    name = db.Column(db.String(120), unique=True)
     #password = db.Column(db.String(128))
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
-    def __init__(self, name):
+    def __init__(self, name, date):
         self.name = name
+        self.date = date
 
 
 class Signup(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), unique=False)
-    lastname = db.Column(db.String(100), unique=False)
+    name = db.Column(db.String(120), unique=True)
+    lastname = db.Column(db.String(120), unique=True)
     #email = db.Column(db.String(120), nullable=False) #index=True, unique=True)
     #password = db.Column(db.String(128))
     #age = db.Column(db.String(128))
@@ -34,9 +35,10 @@ class Signup(db.Model):
     #score = db.relationship('Scores', backref='author', lazy='dynamic')
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
-    def __init__(self, name, lastname):
+    def __init__(self, name, lastname, date):
         self.name = name
         self.lastname = lastname
+        self.date = date
 
 
 class Says(db.Model):
