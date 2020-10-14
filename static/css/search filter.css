@@ -1,0 +1,101 @@
+{
+	margin : 0;
+	padding : 0;
+	box-sizing: border-box;
+}
+a
+{
+	text-decoration: none;
+	color : #fff;
+	cursor: none;
+}
+body {
+	background: #FAFAFA;
+}
+.list
+{
+	
+	margin: 5vh auto;
+	height: 400px;
+	width :300px;
+	
+}
+.icon
+{
+	height : 50px;
+	width : 50px;
+	background-color: #03A9F4;
+	float: left;
+	color : #fff;
+	font-size: 20pt;
+	padding: 10px 0 0 15px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	border-radius: 5px 0 0 5px;
+}
+.list-items
+{
+	clear: both;
+	margin: 10px 0 0 0;
+}
+.search
+{
+	height : 50px;
+	width : 250px;
+	border : none;
+	padding: 0 0 0 15px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+	border-top : 2px solid #03A9F4;
+	border-right : 2px solid #03A9F4;
+	border-bottom : 2px solid #03A9F4;
+	border-radius : 0 5px 5px 0;
+}
+ul
+{
+	padding: 0;
+}
+li
+{
+	list-style-type: none;
+	height: 45px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	padding: 15px 0 0 10px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+	border-left : 5px solid #262626;
+	margin : 5px 0 0 0;
+	border-radius: 0 8px 8px 0;
+	color : white;
+	font-size: 13pt;
+	transition: 0.5s;
+}
+li:nth-child(1)
+{
+	background: #F8A038;
+}
+li:nth-child(2)
+{
+	background: #18D8C8;
+}
+li:nth-child(3)
+{
+	background: #00BCD4;
+}
+li:nth-child(4)
+{
+	background: #FFC107;
+}
+li:nth-child(5)
+{
+	background: #607D8B;
+}
+li:nth-child(6)
+{
+	background: #FF5722;
+}
+li:nth-child(7)
+{
+	background: #00C853;
+}
+li:nth-child(8)
+{
+	background: #EF5350;
+}

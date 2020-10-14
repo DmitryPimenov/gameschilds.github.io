@@ -7,6 +7,8 @@
         <link rel='dns-prefetch' href='//s.w.org'/>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	    <meta charset="UTF-8">
+		<link rel="stylesheet" href="static/css/search filter.css"/>
+        <script defer src="static/js/search felter.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,10 +18,11 @@
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
 		<script src = "https://kit.fontawesome.com/336692b553.js"></script>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	    <link rel="stylesheet" type="text/css" href="../css/login-ui1.css"/>
+	    <!--link rel="stylesheet" type="text/css" href="../css/login-ui1.css"/-->
 	    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable = 0">
@@ -621,10 +624,32 @@ p {
 </head>
 <body>
 {% block body %}
+<div class="container">
+			<div class="list">
+			<p class="icon">
+				<i class="fa fa-search" aria-hidden="true"></i>
+			</p>
+				<input id="uniq" onkeyup="search()" class="search" type="text" placeholder="Search">
+				<div class="list-items">
+					<ul id="ul">
+						<li><a href="#">Chess</a></li>
+						<li><a href="#">Memory</a></li>
+						<li><a href="#">Schulte table</a></li>
+						<li><a href="#">Puzzle</a></li>
+						<li><a href="#">Number puzzle</a></li>
+						<li><a href="#">Tic-Tac-Toe</a></li>
+						<li><a href="#">Stereo pictures</a></li>
+						<li><a href="#">Weather</a></li>
+					    <li><a href="#">Paint</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 <div class="header">
 	
 	<form class="searchbox">
 	<input type="search" value="Search..." class="it">
+		<!--<input id="uniq" onkeyup="search()" class="search" type="text" placeholder="Search">-->
 	<button class="searched"><i class="fa fa-search"></i></button>
 	</form>
 	
