@@ -18,9 +18,8 @@ class Login(db.Model):
     #password = db.Column(db.String(128))
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
-    def __init__(self, name, date):
+    def __init__(self, name):
         self.name = name
-        self.date = date
 
 
 class Signup(db.Model):
@@ -35,10 +34,9 @@ class Signup(db.Model):
     #score = db.relationship('Scores', backref='author', lazy='dynamic')
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
-    def __init__(self, name, lastname, date):
+    def __init__(self, name, lastname):
         self.name = name
         self.lastname = lastname
-        self.date = date
 
 
 class Says(db.Model):
