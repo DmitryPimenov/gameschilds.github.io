@@ -7,7 +7,6 @@
         <link rel='dns-prefetch' href='//s.w.org'/>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	    <meta charset="UTF-8">
-		<link rel="stylesheet" href="static/css/search filter.css"/>
         <script defer src="static/js/search felter.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -624,7 +623,7 @@ p {
 </head>
 <body>
 {% block body %}
-<div class="container">
+<!--div class="container">
 			<div class="list">
 			<p class="icon">
 				<i class="fa fa-search" aria-hidden="true"></i>
@@ -644,12 +643,12 @@ p {
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div-->
 <div class="header">
 	
 	<form class="searchbox">
-	<input type="search" value="Search..." class="it">
-		<!--<input id="uniq" onkeyup="search()" class="search" type="text" placeholder="Search">-->
+	<!--input type="search" value="Search..." class="it"-->
+		<input id="uniq" onkeyup="search()" class="search" type="text" placeholder="Search">
 	<button class="searched"><i class="fa fa-search"></i></button>
 	</form>
 	
