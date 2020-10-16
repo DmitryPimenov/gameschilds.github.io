@@ -12,15 +12,15 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 
-def create_connection(db_name, db_user, db_password, db_host, db_port):
+"""def create_connection(db_name, db_user, db_password, db_host, db_port):
     connection = None
     try:
-        connection = psycopg2.connect(
-            database=db_name,
-            user=db_user,
-            password=db_password,
-            host=db_host,
-            port=db_port,
+        connection = create_connection(
+            db_name=db_name,
+            db_user=db_user,
+            db_password=db_password,
+            db_host=db_host,
+            db_port=db_port,
         )
         print("Connection to PostgreSQL DB successful")
     except OperationalError as e:
@@ -32,8 +32,8 @@ connection = create_connection(
     "dapcck0t5maei5", "zblxandlpeaefo", "8753b8bc80de15b238abb6c5bad8d52e3ba34e585a02814e97cb63eb8c3a0b9a", "ec2-176-34-123-50.eu-west-1.compute.amazonaws.com", "5432"
 )
 
-app.config['SQLALCHEMY_DATABASE_URI'] = connection
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = "Postgres: // zblxandlpeaefo : "
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False"""
 
 
 class Login(db.Model):
