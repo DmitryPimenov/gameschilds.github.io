@@ -1,39 +1,14 @@
 from flask import Flask, render_template, url_for, request, redirect
-from config import Config
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
+#from flask_migrate import Migrate
 from datetime import datetime
-import os
-from sqlalchemy import create_engine, Column, Integer, String
-from psycopg2 import OperationalError
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:D?f4nX#3@localhost/postgres'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+#migrate = Migrate(app, db)
 
-
-"""def create_connection(db_name, db_user, db_password, db_host, db_port):
-    connection = None
-    try:
-        connection = create_connection(
-            db_name=db_name,
-            db_user=db_user,
-            db_password=db_password,
-            db_host=db_host,
-            db_port=db_port,
-        )
-        print("Connection to PostgreSQL DB successful")
-    except OperationalError as e:
-        print(f"The error '{e}' occurred")
-    return connection
-
-
-connection = create_connection(
-    "dapcck0t5maei5", "zblxandlpeaefo", "8753b8bc80de15b238abb6c5bad8d52e3ba34e585a02814e97cb63eb8c3a0b9a", "ec2-176-34-123-50.eu-west-1.compute.amazonaws.com", "5432"
-)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = "Postgres: // zblxandlpeaefo : "
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False"""
 
 
 class Login(db.Model):
@@ -83,8 +58,7 @@ class Scores(db.Model):
         return '<Scores %r>' % self.id
 
 
-if __name__ == '__main__':
-    db.create_all()
+db.create_all()
 
 
 @app.route('/')
