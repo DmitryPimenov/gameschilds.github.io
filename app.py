@@ -8,7 +8,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:D?f4nX#3@localhost/
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 #migrate = Migrate(app, db)
-
+db.create_all()
 
 
 class Login(db.Model):
@@ -56,9 +56,6 @@ class Scores(db.Model):
 
     def __repr__(self):
         return '<Scores %r>' % self.id
-
-
-db.create_all()
 
 
 @app.route('/')
@@ -164,6 +161,6 @@ def signup():
         return render_template("signup.html")
 
 
-#if __name__ == '__main__':
-   # app.run(debug = True)
+if __name__ == '__main__':
+    app.run(debug = True)
 
