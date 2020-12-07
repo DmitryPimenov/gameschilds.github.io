@@ -2,6 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 #from flask_migrate import Migrate
 from datetime import datetime
+#from app import db
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:D?f4nX#3@localhost/postgres'
@@ -9,23 +10,25 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 #migrate = Migrate(app, db)
 db.create_all()
+#db.session.commit()
 
 
 class Login(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120), unique=True)
-    #password = db.Column(db.String(128))
+    password = db.Column(db.String(128))
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
-    def __init__(self, name):
+    def __init__(self, name, password):
         self.name = name
+        self.password = password
 
 
 class Signup(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120), unique=True)
     lastname = db.Column(db.String(120), unique=True)
-    #email = db.Column(db.String(120), nullable=False) #index=True, unique=True)
+    #email = db.Column(db.String(120), index=True, unique=True)
     #password = db.Column(db.String(128))
     #age = db.Column(db.String(128))
     #sex = db.Column(db.String(128), nullable=False)
@@ -33,9 +36,8 @@ class Signup(db.Model):
     #score = db.relationship('Scores', backref='author', lazy='dynamic')
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
-    def __init__(self, name, lastname):
-        self.name = name
-        self.lastname = lastname
+    def __repr__(self):
+        return '<Signup {}>'.format(self.name)
 
 
 class Says(db.Model):
@@ -125,9 +127,9 @@ def number():
 def login():
     if request.method == "POST":
         name = request.form['name']
-        #password = request.form['password']
+        password = request.form['password']
 
-        login = Login(name=name)
+        login = Login(name=name, password=password)
 
         try:
             db.session.add(login)
